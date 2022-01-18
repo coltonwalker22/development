@@ -1,0 +1,58 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.img1 {
+    
+    width: 425px;
+    border: 2px solid red;
+
+}
+.img2{
+    width: 600px;
+    border: 2px solid blue;
+}
+
+/*.home{
+    position: fixed;
+    background-color:purple;
+    left:50px;
+    font-size: 50px;
+
+}
+.menu{
+    position: fixed;
+    background-color: purple;
+    left:200px;
+    font-size: 50px;
+}
+
+.about{
+    position:fixed;
+    background-color: purple;
+    left: 500px;
+    font-size: 50px;
+}
+
+below is a much easier route. I basically did the hardest route. Below is the instructors example
+*/
+
+.nav-bar{
+    position: fixed;
+    font-size: 50px;
+    width: 100%;
+    margin: 10px;
+    background-color: rgb(55,44,22,.4);
+
+}
+
+.about{
+    position: relative;
+    left: 320px;
+}
+
+.menu{
+    position: relative;
+    left: 150px;
+}

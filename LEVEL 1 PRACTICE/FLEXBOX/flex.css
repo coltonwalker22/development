@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#flex-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    height: 200px;
+    margin: 0 10px;
+}
+
+#flex-container > div:nth-child(1){
+    background-color: aqua;
+    height: 30px;
+    margin: 0 10px;
+}
+
+#flex-container > div:nth-child(2){
+    background-color: firebrick;
+    height: 30px;
+    margin: 0 10px;
+}
+
+#flex-container > div:nth-child(3){
+    background-color: violet;
+    height: 30px;
+    margin: 0 10px;
+}
+
+
+
+
+/*
+#flex-direction: row (default):
+    - justify-content: left to right
+    - align-items: top to bottom
+    
+#flex-direction: column
+    - justify-content: top to bottom
+    - align-items: left to right
+
+    when using a class, use . in CSS
+when using an ID, use a # in CSS
+
+
+There's only one of me (id), but lots of people who are middle (class). I use an SSN number (#) to uniquely (id)entify me, while I'm a tiny part (.) of a social (class).
+
+*/

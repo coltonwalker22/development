@@ -1,0 +1,135 @@
+# **Requirements**
+
+Create two directories directly under `terminal-practice`. Name them `dir-one` and `dir-two`.
+
+Within `dir-one` create three files: `index.html`, `app.js`, `styles.css`
+
+Copy the contents of `dir-one` and put them into `dir-two`
+
+`cd` into `dir-two` and rename `app.js` to `main.js` and delete `styles.css`
+
+
+/ $ cd
+~ $ ls
+development
+~ $ cd development/
+~/development $ ls
+assignments  mario
+~/development $ cd assignments/
+~/development/assignments $  ls
+assignment1  assignment2  terminal-practice  vs-intro
+~/development/assignments $ cd terminal-practice
+~/development/assignments/terminal-practice $ ls
+dir-one  dir-two
+~/development/assignments/terminal-practice $ cd dir-one
+~/development/assignments/terminal-practice/dir-one $ ls
+~/development/assignments/terminal-practice/dir-one $ touch index.html
+~/development/assignments/terminal-practice/dir-one $ ls
+index.html
+~/development/assignments/terminal-practice/dir-one $ touch app.js
+~/development/assignments/terminal-practice/dir-one $ touch style.css
+~/development/assignments/terminal-practice/dir-one $ ls
+app.js  index.html  style.css
+~/development/assignments/terminal-practice/dir-one $ cp app.js dir-two/
+cp: cannot create regular file 'dir-two/': Not a directory
+~/development/assignments/terminal-practice/dir-one $ cp dir-one dir-two/
+cp: cannot stat 'dir-one': No such file or directory
+~/development/assignments/terminal-practice/dir-one $ cd..
+cd..: command not found
+~/development/assignments/terminal-practice/dir-one $ cd ..
+~/development/assignments/terminal-practice $ ls
+dir-one  dir-two
+~/development/assignments/terminal-practice $ cd dir-one
+~/development/assignments/terminal-practice/dir-one $ cp app.js dir-two
+~/development/assignments/terminal-practice/dir-one $ cd ..
+~/development/assignments/terminal-practice $ cd dir-two
+~/development/assignments/terminal-practice/dir-two $ ls
+~/development/assignments/terminal-practice/dir-two $ cp app.js ../dir-two
+cp: cannot stat 'app.js': No such file or directory
+~/development/assignments/terminal-practice/dir-two $ ls
+~/development/assignments/terminal-practice/dir-two $ cd ..
+~/development/assignments/terminal-practice $ ls
+dir-one  dir-two
+~/development/assignments/terminal-practice $ cd dir-one
+~/development/assignments/terminal-practice/dir-one $ ls
+app.js  index.html  style.css
+~/development/assignments/terminal-practice/dir-one $ cp app.js ../dir-two
+~/development/assignments/terminal-practice/dir-one $ cd ..
+~/development/assignments/terminal-practice $ ls
+dir-one  dir-two
+~/development/assignments/terminal-practice $ cd dir-two
+~/development/assignments/terminal-practice/dir-two $ ls
+app.js
+~/development/assignments/terminal-practice/dir-two $ cd ..
+~/development/assignments/terminal-practice $ cd dir-one
+~/development/assignments/terminal-practice/dir-one $ ls
+app.js  index.html  style.css
+~/development/assignments/terminal-practice/dir-one $ cp index.html ../dir-two
+~/development/assignments/terminal-practice/dir-one $ cp style.ss ../dir-two
+cp: cannot stat 'style.ss': No such file or directory
+~/development/assignments/terminal-practice/dir-one $ cp style.css ../dir-two
+~/development/assignments/terminal-practice/dir-one $ cd ..
+~/development/assignments/terminal-practice $ cd dir-two
+~/development/assignments/terminal-practice/dir-two $ ls
+app.js  index.html  style.css
+~/development/assignments/terminal-practice/dir-two $ mv app.js main.js
+~/development/assignments/terminal-practice/dir-two $ ls
+index.html  main.js  style.css
+~/development/assignments/terminal-practice/dir-two $ rm style.css
+~/development/assignments/terminal-practice/dir-two $ ls
+index.html  main.js
+~/development/assignments/terminal-practice/dir-two $
+
+/ $ cd
+~ $ ls
+development
+~ $ cd development/
+~/development $ ls
+'TERMINAL PRACTICE NOTES'   assignments   mario
+~/development $ cd assignments
+~/development/assignments $ ls
+assignment1  assignment2  terminal-practice  vs-intro
+~/development/assignments $ cd terminal-practice/
+~/development/assignments/terminal-practice $ ls
+
+dir-one  dir-two  nano.save
+~/development/assignments/terminal-practice $ ls -a
+
+.  ..  dir-one  dir-two  nano.save
+~/development/assignments/terminal-practice $ ls -l
+total 12
+drwxr-xr-x 2 colton colton 4096 Jan 11 19:33 dir-one
+
+<!DOCTYPE html>
+drwxr-xr-x 2 colton colton 4096 Jan 11 19:43 dir-two
+
+-rw------- 1 colton colton    1 Jan 11 19:48 nano.save
+~/development/assignments/terminal-practice $ ls -la
+total 20
+drwxr-xr-x 4 colton colton 4096 Jan 11 19:48 .
+drwxr-xr-x 6 colton colton 4096 Jan 11 19:17 ..
+drwxr-xr-x 2 colton colton 4096 Jan 11 19:33 dir-one
+drwxr-xr-x 2 colton colton 4096 Jan 11 19:43 dir-two
+-rw------- 1 colton colton    1 Jan 11 19:48 nano.save
+~/development/assignments/terminal-practice $ ls -al
+total 20
+drwxr-xr-x 4 colton colton 4096 Jan 11 19:48 .
+drwxr-xr-x 6 colton colton 4096 Jan 11 19:17 ..
+drwxr-xr-x 2 colton colton 4096 Jan 11 19:33 dir-one
+drwxr-xr-x 2 colton colton 4096 Jan 11 19:43 dir-two
+-rw------- 1 colton colton    1 Jan 11 19:48 nano.save
+~/development/assignments/terminal-practice $ code .
+~/development/assignments/terminal-practice $ ls
+dir-one  dir-two  nano.save
+~/development/assignments/terminal-practice $ cd dir-two
+~/development/assignments/terminal-practice/dir-two $ ls
+index.html  main.js
+~/development/assignments/terminal-practice/dir-two $ nano main.js
+~/development/assignments/terminal-practice/dir-two $ code .
+~/development/assignments/terminal-practice/dir-two $ nano main.js
+~/development/assignments/terminal-practice/dir-two $ ls
+index.html  main.js
+~/development/assignments/terminal-practice/dir-two $ code .
+~/development/assignments/terminal-practice/dir-two $ vi index.html
+~/development/assignments/terminal-practice/dir-two $ vi index.html
+~/development/assignments/terminal-practice/dir-two $

@@ -1,0 +1,38 @@
+.item1 { 
+    grid-area: red;
+    background-color: red;
+ }
+
+.item2 { 
+    grid-area: blue;
+    background-color: blue;
+ }
+
+.item3 { 
+    grid-area: green;
+    background-color: green;
+}
+
+.item4 { 
+    grid-area: purple;
+    background-color: purple;
+}
+
+.item5 { 
+    grid-area: purple2;
+    background-color: purple;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'red red red red'
+    'blue blue green green'
+    'blue blue purple purple2';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+    border-radius: 15px;
+    padding:60px;
+}
