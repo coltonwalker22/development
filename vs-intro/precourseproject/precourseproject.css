@@ -1,0 +1,32 @@
+body {
+    background-color:cyan
+}
+
+li {
+    font-size:30px;
+}
+.box-one {
+    display: inline-block;
+    border: 5px solid black;
+    padding-right: 10px
+
+}
+.box-two {
+    display: inline-block;
+    border: 5px solid black;
+    padding-right: 10px
+}
+#button1{
+ transition: padding 1s ease-in-out;
+padding: 10px;
+color: white;
+background: black;
+border-radius: 10px;
+}
+#button1:hover{
+background-color: blueviolet;
+padding: 30px;
+}
+#button1:active{
+    background-color: yellow;
+}

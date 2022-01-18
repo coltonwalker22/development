@@ -1,0 +1,14 @@
+body {
+    background-color:#A4F6B9
+}
+.header{
+    background-color:#AA44BB
+}
+.comments {
+    background-color: rgba(55,155,255,.2);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+.funstuff {
+    background-color: rgb(150, 73, 73);
+    font-family: Arial, Helvetica, sans-serif;
+}
