@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+<body>
+
+firstNumber: <input type="text" min="0" id="firstNumber"/><br>
+secondNumber: <input type="text"min="0" id="secondNumber"/><br>
+<input type="button" onclick="multiply()" value="multiply">
+<input type="button" onclick="divide()" value="divide">
+<p>result is: <span id="result"></span></p>
+</body>
+<script>
+
+const param = new URLSearchParams(window.location.search)
+
+let fn = param.get('fn');
+let sn = param.get('sn');
+
+document.getElementById("firstNumber").value = fn
+document.getElementById("secondNumber").value = sn
+
+function multiply(){
+    let num1 = document.getElementById("firstNumber").value
+    let num2 = document.getElementById("secondNumber").value
+    document.getElementById("result").innerHTML = num1 * num2
+}
+
+function divide(){
+    let num1 = document.getElementById("firstNumber").value
+    let num2 = document.getElementById("secondNumber").value
+    document.getElementById("result").innerHTML = num1 / num2
+}
+
+
+let fileName = ['hello', 5 ,'object'];
+fileName.unshift('push')
+console.log(fileName)
+
+
+
+
+
+
+
+
+let today = new Date()
+
+let dd = today.getDate()
+if (dd < 10){
+  dd = '0'+ dd;
+}
+
+
+
+let mm = today.getMonth()+1
+if(mm < 10){
+    mm = '0'+ mm;
+}
+
+let yyyy = today.getFullYear()
+
+console.log(`${dd} / ${mm} / ${yyyy}`)
+
+console.log(mm+'/'+dd+'/'+yyyy)
+
+
+console.log(Math.ceil(Math.random()*10))
+
+</script>
+</html>

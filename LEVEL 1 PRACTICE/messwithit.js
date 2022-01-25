@@ -1,4 +1,4 @@
-var readlineSync = require('readline-sync')
+let readlineSync = require('readline-sync')
 
 
 let foundKey = false
