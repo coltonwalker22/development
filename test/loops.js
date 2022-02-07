@@ -65,7 +65,7 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
     }
   ]
 
-//   console.log(peopleWhoWantToSeeMadMaxFuryRoad.filter(fingledorf => fingledorf.gender === "female"))
+  console.log(peopleWhoWantToSeeMadMaxFuryRoad.filter(fingledorf => fingledorf.gender === "female"))
 
 //   console.log(peopleWhoWantToSeeMadMaxFuryRoad.filter(({gender}) => gender === "female"))  //destruct key=name of value 
 // console.log(

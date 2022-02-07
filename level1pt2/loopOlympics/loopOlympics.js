@@ -26,13 +26,13 @@
 // 1. Write a for loop that will push the numbers 0 through 9 to an array.
 
 
-// const array = [];
+// const myArray = [];
 
-// let count = 0
 
 // for (i = 0; i < 10; i++){
-//     console.log(array.push([i]))
+//     myArray.push(i);
 // }
+// console.log(myArray)
 
  
 
@@ -53,10 +53,11 @@
 
 const fruit = ["banana", "orange", "apple", "kiwi", "pear", "peach"]
 
-let newFruit = []
-
-for (i = 0; i < fruit.length; i++){
-    if(fruit[i] % 3 === 0){
-        console.log(fruit[i])
-    }
-}
+function skipFruit(array){
+        let newArr = []
+        for(let i = 0; i <= array.length; i+=2){
+            newArr.push(array[i])
+        }
+        return newArr.join(", ")
+    } 
+    console.log(skipFruit(fruit))
