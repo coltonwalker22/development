@@ -2,7 +2,7 @@
 const chalk= require("chalk");
 readlineSync = require('readline-sync')
 
-let username = readlineSync.question(chalk.green('Hello warrior! What is your name, hero?'))
+let username = readlineSync.question(chalk.green('Hello warrior! What is your name, hero? '))
 
 
 let greeting = readlineSync.keyInPause(chalk.green(`${username}! There are enemies in the nearby forest.\n

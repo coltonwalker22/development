@@ -18,12 +18,12 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 
 
-function forception(arr1, arr2){
+function forception(arr1, str){
     let arr =[]
       for (let i = 0; i <= arr1.length; i++){
             arr.push(arr1[i])
-        for (let j = 0; j <= arr2.length; j+=1){
-            arr.push(arr2[j])
+        for (let j = 0; j <= str.length; j+=1){
+            arr.push(str[j])
         }
       }
 

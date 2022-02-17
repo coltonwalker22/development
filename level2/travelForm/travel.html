@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="travel.css">
+    <title>travel form</title>
+</head>
+<body>
+<h1 class="title"> Your personal travel form</h1>
+<form name="main-form" id="main-form">
+    <div id="name-title">Full name:
+    <br>
+    <!-- <label for="first-name">First Name:</label> -->
+    <input id="first-name" type="text"name="first-name" placeholder="first name"/>
+    <br>
+    <!-- <label for="first-name">Last Name:</label> -->
+    <input id="last-name" type="text"name="last-name" placeholder="last name"/>
+    </div>
+
+    <div id="age-title">Age:</div>
+    <br>
+    <input id="age" type="number"name="age" placeholder="age"/>
+    <br>
+    <div id="gender-title">Gender:</div>
+    
+    <div id="gender">
+    <input type="radio" id="male" name="male" value="male">
+    <label for="male">Male</label>
+    
+    <input type="radio" id="female" name="female" value="female">
+    <label for="female">female</label>
+    </div>
+
+    <br>
+
+    <label id="location-title" for="location">Desired location:</label>
+    <br>
+    <select id="location" name="location">
+        <option name="BNA" value="BNA / Nashville">BNA / Nashville</option>
+        <option name="ORD" value="ORD / Chicago">ORD / Chicago</option>
+        <option name="DET" value="DET / Detroit">DET / Detroit</option>
+    </select>
+    <br>
+    <div id="diet-title">Dietary Restrictions</div>
+<div id="diet">
+    <input type="checkbox" id="kosher"name="kosher" value="kosher">
+    <label for="kosher">Kosher</label>
+<br>
+    <input type="checkbox" id="vegitarian"name="vegitarian"value="vegitarian">
+    <label for="vegitarian">Vegitarian</label>
+<br>
+    <input type="checkbox" id="vegan"name="vegan" value="vegan">
+    <label for="vegan">Vegan</label>
+</div>
+    <br>
+    <button>submit</button>
+</form>
+
+<!-- <fieldset>
+    <legend>Data Entry</legend>
+    <input>
+</fieldset> -->
+
+
+<script src="travel.js"></script>
+</body>
+</html>

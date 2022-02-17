@@ -1,0 +1,90 @@
+body{
+    margin: 30px;
+    background-color:cornflowerblue;
+}
+
+
+.title{
+    font-size: 50px;
+    text-align: center;
+}
+
+
+#main-form{
+flex-direction: column;
+width: fit-content;
+margin:auto;
+gap: 10px;
+text-align: center;
+border: 2px solid black;
+padding: 20px;
+
+border-radius: 15px;
+}
+ #name-title{
+    padding:15px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#first-name{
+  margin: auto;
+  border: 2px solid black;
+}
+#last-name{
+    margin: auto;
+    border: 2px solid black;
+}
+
+#age-title{
+    padding:15px;
+    font-size: 25px;
+    text-decoration: underline;
+    display:inline-block
+}
+
+#gender-title{
+    padding:15px;
+    font-size: 25px;
+    text-decoration: underline;
+    display: inline-flex;
+}
+
+
+#gender{
+    flex-direction: row;
+}
+/* #male{
+    margin:auto;
+    text-align:center;
+    border: 2px solid black;
+}
+
+#female{
+    margin: auto;
+    text-align:center;
+} */
+
+#location-title{
+    /* padding:15px; */
+    margin: auto;
+    font-size: 25px;
+    text-decoration: underline;
+
+}
+#location{
+   margin-top: 10px;
+   margin-bottom: 10px;
+} 
+
+#diet-title{
+    font-size: 25px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    
+}
+
+#diet{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><a href="clicker.html">clicker</a></div>
+    <span>score: </span> <span id="score"></span>
+    <div><button onclick="upgradeClicks()">upgrade-30 </button></div>
+    <script>
+        let scoreDisplay = document.getElementById("score")
+        let player = JSON.parse(localStorage.getItem("player"))
+        scoreDisplay.innerHTML = player.score || 0
+        
+        function upgradeClicks(){
+            if( player.score < 30){return}
+            player.score -= 30
+            scoreDisplay.innerHTML = player.score
+            player.scorePerClick +=1
+            localStorage.setItem("player", JSON.stringify(player))
+
+        }
+    </script>
+</body>
+</html>
