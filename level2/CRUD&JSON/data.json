@@ -1,0 +1,35 @@
+
+{ 
+    "data":[
+        {
+            "name": "Steve",
+            "age": 20,
+            "isAlive": true,
+            "friens": ["john", "betty", "jake"],
+            "adrress": {
+                "street": "123 street",
+                "city": "SLC"
+            }
+        },
+        {
+            "name": "Steve",
+            "age": 20,
+            "isAlive": true,
+            "friens": ["john", "betty", "jake"],
+            "adrress": {
+                "street": "123 street",
+                "city": "SLC"
+            }
+        },
+        {
+            "name": "Steve",
+            "age": 20,
+            "isAlive": true,
+            "friens": ["john", "betty", "jake"],
+            "adrress": {
+                "street": "123 street",
+                "city": "SLC"
+            }
+        }
+    ]
+}

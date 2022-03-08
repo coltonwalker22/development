@@ -1,0 +1,125 @@
+body{
+    margin: 0px;
+    background-color:rgb(135, 222, 248)
+}
+
+header{
+    background-color:rgb(177, 171, 248);
+    font-size:100px;
+    border: 5px solid black;
+    width: 50%;
+    text-align: center;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 50px;
+    
+}
+
+.container{
+    background-color:rgb(177, 171, 248);
+    border: 5px solid black;
+    width: 50%;
+    text-align: center;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 25px;
+
+}
+
+.myForm{
+    text-align: center;
+    margin-bottom: 50px;;
+
+}
+
+.inputItem{
+    height:50px;
+    width: 600px;
+    font-size: 35px;
+    
+}
+
+.InputItemButton{
+    background-color:rgb(118, 108, 233);
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* input[type="checkbox"]{
+height: 20px;
+width: 20px;
+} */
+
+.todo{
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 10px 0;
+
+}
+
+.ordered-list{
+    font-size: 50px;
+}
+
+.newListItem{
+ font-size: 50px;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ gap: 30px;
+ border: 3px solid black;
+ margin: 30px auto;
+ width:75%;
+ word-wrap: normal;
+}
+
+#todo-list{
+word-wrap: normal;
+}
+
+.editButton{
+display: inline-block;
+    height: 35px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    width: 75px;
+}
+
+.editButton:hover{
+    background-color:rgb(118, 108, 233);
+    transition: .3s;
+ 
+}
+
+.deleteButton{
+    display: inline-block;
+    height: 35px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    width: 75px;
+    
+
+}
+
+.deleteButton:hover{
+    background-color:rgb(118, 108, 233);
+    transition: .3s;
+
+}
+
+.saveButton{
+    margin-left: 20px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.newInput {
+    height:50px;
+    font-size: 35px;
+}
+
+.checkbox{
+margin-top: 30px;
+}

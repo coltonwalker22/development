@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin:5x;
+}
+
+.header{
+    font-size: 50px;
+    text-align: center;
+    background-color: purple;
+    border: 5px solid black;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.container{
+border: 5px solid black;
+margin-top: 20px;
+padding:100px;
+padding-bottom: 600px;
+background-color: purple;
+border-radius: 25px;
+display: grid;
+grid-template-columns: repeat(7, auto);
+grid-template-rows: 100px;
+text-align: center;
+gap: 10px;
+margin-bottom: 800px;
+
+}
+
+
+.radius{
+    margin: 0 auto;
+    grid-column: "1 / 2 ";
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+.radius:hover{
+    border-radius: 100%;
+    transition-duration: 3s;
+    background-color: blue;
+}
+
+.rotate{
+    margin: auto;
+    grid-column: "2 / 3";
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+    transition: ease-in-out;
+
+}
+
+.rotate:hover{
+    width: 250px;
+    height: 250px;
+    transform: rotate(180deg);
+    transition-duration: 3s;
+    background-color: orangered;
+
+}
+
+.size{
+    margin: auto;
+    grid-column: "3 / 4";
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+    transition: background-color 3s linear 1s, width 3s linear ;
+
+}
+
+.size:hover{
+    background-color: green;
+    /* transition-duration: 3s; */
+    height: 400px;
+    width: 400px;
+    transition-timing-function: ease-out;
+}
+
+
+.border{
+    margin: auto;
+    grid-column: "4 / 5";
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+    gap: 10px;
+
+}
+
+.border:hover{
+    background-color: yellow;
+    transition-duration: 5s;
+    transition-timing-function: ease-in-out;
+    border: 5px dotted black;
+    transition: background-color 1s linear 1s, width 1s linear ;
+}
+
+.backgroundColor{
+    margin: auto;
+    grid-column: " 5 / 6 ";
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.backgroundColor:hover{
+    content: "you should be dancing!" ;
+    background-color:aqua ;
+    transform: scale(2,3);
+    transition-duration: 3s;
+    
+    
+}
+
+.position{
+    margin: auto;
+    grid-column: " 6 / 7 ";
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.position:hover{
+    background-color: seagreen;
+    transform: translateY(200px);
+    transition-duration: 3s;
+}

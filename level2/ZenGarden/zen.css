@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Libre+Baskerville:ital@0;1&display=swap');
+
+*{
+    margin: 0px;
+}
+
+h3{
+    font-family: 'Julius Sans One';
+    color: #2E484C;
+    font-size: 29px;
+    margin-top: 40px;
+}
+
+p{
+    font-family: 'Libre Baskersville';
+    font-size: 18px;
+    color: #325050;
+    margin: 12px 0;
+    line-height: 2;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding: 20px 0px;
+    width: 350px;
+    font-family: 'Julius Sans One'
+}
+
+.firstSideBar li:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.firstSideBar li div:first-child{
+    font-size: 19px;
+    color: #607476
+}
+
+.firstSideBar li div:last-child{
+    font-family: 'Libre Baskerville';
+    font-size: 14px;
+    color: #616857
+}
+
+.firstSideBar span{
+    font-style: italic;
+    color: #C0CAC3;
+}
+
+.container{
+    display:grid;
+    grid-template-areas:
+    'headerLeft headerRight'
+    'firstBody firstSideBar'
+    'secondBody secondSideBar'
+    'thirdBody thirdSideBar'
+    'firstFooter firstFooter'
+    'secondFooter secondFooter';
+    grid-template-columns: 2fr 1fr;
+}
+
+
+.headerLeft{
+    grid-area: headerLeft;
+    font-family:'Julius Sans One';
+    background-color: #325050;
+    color: white;
+    padding: 40px 0px 40px 160px
+}
+
+.underTitle{
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+}
+
+.headerRight{
+    grid-area: headerRight;
+    background-color: #325050; 
+    color: white;
+    font-family: 'Julius Sans One';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.headerRight div{
+    position: relative;
+    display: inline-block;
+}
+
+.headerRight .buttonText{
+    padding: 20px 80px;
+    background-color:rgba(255, 255, 255, .1);
+    margin: 0px 2px;
+    transition: background-color .3s;
+}
+
+.headerRight .arrow1{
+    padding: 20px 30px;
+    background-color:rgba(255, 255, 255, .1);
+    transition: background-color .3s;
+
+}
+
+.headerRight .arrow2{
+    padding: 20px 30px;
+    background-color:rgba(255, 255, 255, .1);
+    transition: background-color .3s;
+
+}
+
+.buttonText:hover{
+    background-color: rgba(255, 255, 255, .5);
+    
+}
+
+
+.arrow1:hover{
+    background-color: rgba(255, 255, 255, .5);
+    
+}
+
+
+.arrow2:hover{
+    background-color: rgba(255, 255, 255, .5);
+    
+}
+
+.firstBody{
+    grid-area: firstBody;
+}
+
+.firstSideBar{
+    grid-area: firstSideBar;
+    background-color: rgba(50, 80, 80, .2);
+    padding: 60px;
+}
+
+.secondBody{
+    grid-area: secondBody;
+    background-color: rgba(138, 188, 159, .5);
+}
+
+.secondSideBar{
+    grid-area: secondSideBar;
+    padding: 40px 60px;
+    background-color: rgba(138, 188, 159, .7);
+    display: flex;
+    align-items: center;
+    
+}
+
+.secondSideBar ul{
+    position: relative;
+}
+
+.secondSideBar li{
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.secondSideBar li:first-child{
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.thirdBody{
+    grid-area: thirdBody;
+}
+
+.thirdSideBar{
+    grid-area: thirdSideBar;
+    background-color: rgba(50, 80, 80, .2)
+}
+
+.firstFooter{
+    grid-area: firstFooter;
+    background-color: #325050;
+    color:white;
+    text-align: center;
+    padding: 90px 230px;
+    font-size: 32px;
+    font-family: 'Libre Baskerville';
+    line-height: 2;
+}
+
+.firstFooter i{
+    color:rgba(255, 255, 255, .5)
+}
+
+.secondFooter{
+    grid-area: secondFooter;
+    background-color: #134347;
+    padding: 50px 190px;
+    display: flex;
+    justify-content: center;
+}
+
+.secondFooter div{
+    height: 72px;
+    width: 72px;
+    border-radius: 100%;
+    border: 3px solid rgba(255, 255, 255, .6);
+    margin: 0px 50px;
+    display: inline-block;
+    position: relative;
+}
+
+.firstBody,.secondBody, .thirdBody{
+    padding: 40px 100px 40px 160px;
+}
+
+@media screen and (max-width: 1132px){
+    .container {
+    grid-template-areas:
+    'headerLeft'
+    'headerRight'
+    'firstBody'
+    'secondBody'
+    'thirdBody'
+    'firstFooter'
+    'secondFooter'
+    'firstSideBar'
+    'secondSideBar';
+    grid-template-columns: 1fr;
+    }
+}

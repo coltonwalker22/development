@@ -1,0 +1,64 @@
+{
+    "appetizers":[
+        {
+            "item": "mac and cheese bites",
+            "ingredients": ["veleeta","macaroni noodles","garlic"],
+            "description": "Fried balls of macaroni cheese."
+        },
+        {
+            "item": "loaded BBQ nachos",
+            "ingredients": ["tortilla chips","pulled pork","nacho chees","BBQ  sauce"],
+            "description": "A nacho plate loaded with cheese and BBQ"
+        }
+    ],
+    "hot sanwiches":[
+        {
+            "item": "Turkey Reuben Sandwich",
+            "ingredients": ["rye bread","turkey","swiss cheese", "reuben sauce"],
+            "description": "A warm sandwich with turkey, melted swiss in a reuben sauce"
+        },
+        {
+            "item": "french Dip",
+            "ingredients":["sub bread", "roast beef", "au jus"],
+            "description": "sub with roast beef to dip in au jus"
+        }
+    ],
+    "cold sandwiches":[
+        {
+            "item": "Tangy raspberry-turkey",
+            "ingredients": ["grey-poupon","raspberry jam", "flatbread", "lettuce", "red onion"],
+            "description": "delicious turkey with a sweet raspberry jam glaze and mustard"
+        },
+        {
+            "item": "herbed tuna sandwich",
+            "ingredients": ["english muffin", "Tuna", "mayo with olive oil", "lettuce", "tomato", "grated cheese"],
+            "description": "tuna on english muffin with lettuce, tomato and mayo and grated cheese."
+        }
+    ],
+    "Desserts":[
+        {
+            "item": "brownie and ice cream sundae",
+            "ingredients": ["choclate brownie", "vanilla bean ice cream", "hersheys syrup","whip cream"],
+            "description": "vanilla bean icream on a warm brownie with drizzle chocolate and whip cream"
+        },
+        {
+            "item": "cherry pie",
+            "ingredients": ["cherries","cherry filling","buttered crust","vanilla ice cream"],
+            "description": "delicious turkey with a sweet raspberry jam glaze and mustard"
+        }
+    ],
+    "drinks":[
+        {
+            "item": "water",
+            "ingredients": ["...h2O"],
+            "description": "dude its just water. you can have a lemon too."
+        },
+        {
+            "item": "lemonade",
+            "ingredients": ["water", "sugar","lemons"],
+            "description": "just your classic lemonade."
+        }
+    ]
+    
+        
+}
