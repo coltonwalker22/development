@@ -1,14 +1,14 @@
 // 1) Sort an array from smallest number to largest
 
-// let numbers = [1, 3, 5, 2, 90, 20]
+let numbers = [1, 3, 5, 2, 90, 20]
 
-// function leastToGreatest(arr){
-//     let result = arr.sort((a, b) => a - b)
-//     return result
+function leastToGreatest(arr){
+    let result = arr.sort((a, b) => a - b)
+    return result
     
-// }
+}
   
-//   console.log(leastToGreatest(numbers)); // [1, 2, 3, 5, 20, 90]
+  console.log(leastToGreatest(numbers)); // [1, 2, 3, 5, 20, 90]
 
 
 //   2) Sort an array from largest number to smallest

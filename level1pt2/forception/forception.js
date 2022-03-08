@@ -19,7 +19,7 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 
 function forception(arr1, str){
-    let arr =[]
+    let arr = []
       for (let i = 0; i <= arr1.length; i++){
             arr.push(arr1[i])
         for (let j = 0; j <= str.length; j+=1){
@@ -30,4 +30,5 @@ function forception(arr1, str){
     return arr
 }
 console.log(forception(people, alphabet))
+
 

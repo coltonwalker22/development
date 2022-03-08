@@ -3,15 +3,15 @@
 // let numbers = [1,2,3]
 
 
-// function total(arr) {
-//     let result = arr.reduce(function(final, num){
-//         final += num
-//         return final
-//     })
-//     return result
-//  }
+function total(arr) {
+    let result = arr.reduce(function(final, num){
+        final += num
+        return final
+    })
+    return result
+ }
  
-//  console.log(total(numbers)); // 6
+ console.log(total(numbers)); // 6
 
 
 //  2) Turn an array of numbers into a long string of all those numbers.
