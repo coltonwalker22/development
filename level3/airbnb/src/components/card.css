@@ -1,0 +1,60 @@
+.card {
+    width: 175px;
+    font-size: 12px;
+    padding-left: 36px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
+    position: relative;
+}
+
+.card--image{
+    /* margin: 0 auto; */
+    /* position: relative; right:640px; */
+    margin-bottom: 7px;
+    height: 235px;
+    width: 176px;
+    align-self: left;
+}
+
+.card--title {
+    height: 25px;
+}
+
+.card--stats {
+    display: flex;
+    align-items: center;
+}
+
+.card--star {
+    height: 14px;
+}
+
+/* ADD */
+
+
+.card--star{
+    height: 14px;
+}
+
+.gray{
+    color: #918E9B
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 45px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.card--price{
+    margin: 0 auto;
+}

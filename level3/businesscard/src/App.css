@@ -1,0 +1,135 @@
+.app {
+  text-align: center;
+  background-color:#23252C;
+  padding: 20px;
+}
+
+
+.headshot {
+  width:317px;
+  border-radius: 25px 25px 0px 0px;
+}
+.header {
+  margin: 0 auto;
+  background-color: #1A1B21;
+  text-align: center;
+  width:317px;
+  
+}
+
+/*  the beginning ".header" is not needed to retrieve class,
+but to keep track of locations in this situation. */
+
+.header > .name {
+  margin: 0 auto;
+  color: #FFFFFF;
+  font-family: Inter, sans-serif;
+  font-weight: 700, bold;
+  font-size: 25px;
+}
+
+.header > .career {
+  margin: 0px auto;
+  margin-top: 5px;
+  color: #F3BF99;
+  font-family: Inter, sans-serif;
+  font-weight: 400px;
+  font-size: 12.8px;
+  text-align:center;
+  width: 178px;
+}
+
+.header > .link {
+  margin: 10px;
+  font-family: Inter, sans-serif;
+  color: #FFFFFF;
+  font-size: 10px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-email {
+width: 115px;
+height: 34px;
+font-family: Inter, sans-serif;
+font-size: 14px;
+font-weight: 500, medium;
+border-radius: 5px;
+padding: 9px 13px 9px 11px;
+}
+
+.email-text{
+  display: absolute;
+  bottom: 25px;
+}
+
+.email-icon {
+  margin-top: 5px;
+  margin-right: 5px;
+  height: 16px;
+  width: 16px;
+}
+
+
+
+.button-linkedin {
+width: 115px;
+height: 34px;
+font-family: Inter, sans-serif;
+border-radius: 5px;
+background-color: #5093E2;
+}
+
+
+.body {
+  margin: 0 auto;
+  background-color: #1A1B21;
+  text-align: center;
+  width:317px;
+ 
+}
+
+.about-title{
+  margin: 0 auto;
+  padding-top: 33px;
+  padding-right: 160px;
+  color: #FFFFFF;
+  
+  
+}
+
+.about-text{
+  color: #DCDCDC;
+  font-family: Inter, sans-serif;
+  font-size: 10.24px;
+  line-height: 20px;
+  font-weight: 400, regular;
+  width: 85%;
+  text-align: left;
+  padding-left:35px;
+
+}
+
+.interests-title{
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 135px;
+  color: #F5F5F5;
+}
+
+.interests-paragraph{
+  color: #DCDCDC;
+  font-family: Inter, sans-serif;
+  font-size: 10.24px;
+  line-height: 20px;
+  font-weight: 400, regular;
+  width: 85%;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 15px;
+  /* word-break: normal; */
+}

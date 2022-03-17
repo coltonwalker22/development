@@ -1,0 +1,33 @@
+.header{
+    background-color: #F55A5A;
+    display:flex;
+    text-align: center;
+    margin: 0 auto;
+    /* height: 65px; */
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header--logo{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    
+
+}
+
+.header--title{
+    color: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    text-shadow: 0px 4px 5px #1c1b22;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    
+
+    
+}
+
