@@ -1,0 +1,15 @@
+.friend-card{
+    margin-left: 20px;
+    display: inline-block;
+    grid-template-columns: 1fr 1fr;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0);
+    padding: 15px;
+}
+
+.pet-list{
+    margin-left: 20px;
+    display: inline-block;
+    grid-template-columns: 1fr 1fr;
+}

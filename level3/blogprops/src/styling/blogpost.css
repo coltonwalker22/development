@@ -1,0 +1,44 @@
+.post--title{
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 0px;
+}
+
+.post--subtitle{
+    margin-top: 0px;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.5
+}
+
+
+.author-date-container{
+    display: inline-block;
+}
+
+.post--author{
+    display: inline;
+    margin-top: 0px;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5
+}
+
+
+.post--date{
+    display: inline;
+    margin-top: 0px;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5
+}
+
+.blogpost-container:not(last-child){
+    padding-bottom:32px;
+    border-bottom: 1px solid #EAEAEA;
+}

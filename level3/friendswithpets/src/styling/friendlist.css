@@ -1,0 +1,37 @@
+.friendlist-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    color: rgb(178, 180, 139);
+    margin-top: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.);
+    background-color: rgba(255, 0, 0, 0)
+}
+
+.name{
+    color: rgb(232, 235, 192);
+    font-family: 'Inter';
+    font-weight: SemiBold 600;
+    font-size: 30px;
+}
+
+.age{
+    color: rgb(232, 235, 192);
+    font-family: 'Inter';
+    font-weight: SemiBold 600;
+    font-size: 30px;
+}
+
+.pets-title{
+    color: rgb(232, 235, 192);
+    font-family: 'Inter';
+    font-weight: SemiBold 600;
+    font-size: 30px;
+}
+
+.pets-name{
+    color: rgb(232, 235, 192);
+    font-family: 'Inter';
+    font-weight: SemiBold 600;
+    font-size: 30px;
+}

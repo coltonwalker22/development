@@ -1,0 +1,49 @@
+.footer-container{
+    display: block;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    text-align: center;
+    border-top: .5px solid #EAEAEA;
+}
+
+.footer--copyright{
+    text-align: center;
+    font-family:"Lora";
+   font-size: 17.5px;
+   color: #6C757D;
+   /* font-style: italic; */
+   font-weight: 1+
+   00;
+}
+
+.image--twitter{
+
+}
+
+.image--facebook{
+ padding: 0 20px;
+ }
+
+ .image--github{
+
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+    margin-left: 310px;
+}
+
+.button-olderposts:not(last-child){
+    color: #fff;
+    background-color: #0085A1;
+    border-color: #0085A1;
+    padding: 16px;
+    border: 1px #0085A1;
+    font-family: "open sans";
+    font-size: 14px;
+    font-style: bold;
+    height: 55px;
+    width: 180px;
+}

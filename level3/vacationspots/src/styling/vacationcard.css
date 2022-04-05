@@ -1,0 +1,63 @@
+.vacationcard-container{
+    display: grid;
+    margin: 20px;
+}
+
+
+
+.vacationcard--image{
+    border-radius: 5px;;
+    margin-left: 30px;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    box-shadow: 0 15px 10px rgb(0 0 0 / 0.5)
+}
+
+
+.vacationcard--place{
+    font-family: 'Raleway';
+    font-weight: regular 400;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+
+}
+
+.vacationcard--price{
+    font-family: 'Raleway';
+    font-weight: normal 400;
+    margin: 0px;
+    margin-left: 30px;
+    font-size: 35px;
+}
+
+.vacationcard--timetogo{
+font-family: 'Raleway';
+font-weight: light 300;
+margin: 0px;
+margin-top: 20px;
+margin-left: 30px;
+}
+
+.button-container{
+font-family: 'Raleway';
+display: flex;
+justify-content: center;
+
+
+}
+
+.button-book{
+    display: flex;
+    font-family: 'Raleway';
+    margin-right: 130px;
+    height: 60px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color:antiquewhite;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.3);
+}

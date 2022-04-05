@@ -1,0 +1,59 @@
+.nav{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    padding: 10px 60px 10px 60px;
+    margin: 0px 300px;
+    margin-left: 125px;
+    font-family: 'Raleway';
+    color:antiquewhite;
+}
+
+.nav--options{
+    display: inline;
+    font-size: 30px;
+    letter-spacing: 0.0625em;
+    padding: 12px 10px;
+    font-weight: light 300;
+    color:antiquewhite;
+    
+
+
+}
+
+.nav--title{
+margin: 0px;
+padding-top: 20px;
+margin-right: auto;
+font-family: 'Raleway';
+font-size: 20px;
+font-weight: light 300;
+}
+
+.nav--list-container{
+    display: flex;
+    list-style: none;
+}
+
+.header-container{
+    height: 45vh;
+    background-repeat: no-repeat;
+    background-color: rgba(73, 80, 87, 1);
+    background-image: url('http://localhost:3000/img/cliffsofdover.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(73, 80, 87, .6);
+    text-align: center;
+    justify-content: center;
+    
+
+}
+
+.header-title{
+    position: relative;
+    color:antiquewhite;
+    font-size: 120px;
+    font-family: 'Raleway';
+    font-weight: light 300;
+    padding-right: 80px;
+}

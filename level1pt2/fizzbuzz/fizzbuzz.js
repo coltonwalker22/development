@@ -25,3 +25,5 @@ for (let i = 1; i <= 100; i++){
 const animals = ["lion", "giraffe", "hippo", "your mom"]
 
 console.log(animals)
+
+

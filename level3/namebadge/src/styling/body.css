@@ -1,0 +1,30 @@
+.form{
+    display: flex;
+    flex-flow: row wrap;
+   justify-content: center;
+   gap:15px;
+}
+
+.form-firstName, .form-lastName, .form-email, .form-placeOfBirth,
+.form-phone, .form-favoirteFood{
+    display: inline-block;
+    border-radius: 5px;
+    width: 700px;
+    height:15px;
+    font-size: 14px;
+}
+
+.form-bio{
+    width: 76%;
+    height: 40px;
+}
+
+.break {
+	flex-basis: 100%;
+	height: 0;
+  }
+
+.form-submit{
+padding: 15px 20px;
+font-size:20px;
+}

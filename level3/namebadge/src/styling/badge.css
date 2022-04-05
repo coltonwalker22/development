@@ -1,0 +1,31 @@
+.badge-container{
+    
+        display: flex;
+        flex-flow: row wrap;
+       justify-content: center;
+       gap:15px;
+}
+
+.badge-firstName, .badge-lastName, .badge-email,
+.badge-placeOfBirth, .badge-phone, .badge-favoriteFood
+{
+    display: inline-block;
+    border-radius: 5px;
+    width: 700px;
+    height:15px;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.badge-bio{
+width: 85%;
+border: 2px solid black;
+border-radius: 10px;
+font-size: 20px;
+}
+
+.break {
+	flex-basis: 100%;
+	height: 0;
+  }
+
