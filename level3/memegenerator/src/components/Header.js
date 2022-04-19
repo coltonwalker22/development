@@ -1,5 +1,5 @@
 import React from 'react';
-// import TrollFace from './TrollFace.svg'
+
 
 export default function Header(){
     return(

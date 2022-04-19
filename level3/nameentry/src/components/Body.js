@@ -24,8 +24,8 @@ export default function Body(){
     return(
         <form onSubmit={handleSubmit}>
         <h1>{newEntry}</h1>
-        <input type="text" onChange={handleChange} placeholder="name entry"/>
-        <button>add new item</button>
+        <input type="text" onChange={handleChange} placeholder="name entry" className="name-input"/>
+        <button className="name-submit">add new item</button>
         <Listitem key={uuidv4()} data={formData} id={uuidv4()} />
 
         </form>

@@ -1,0 +1,49 @@
+/* LIGHT THEME */
+.light-text-description{
+    padding-top: 80px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.light-body-container{
+    background-color:#c7dbd4;
+    padding-bottom: 600px;
+}
+
+
+.light-button {
+    background-color: #07dd8f;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    margin-left: 860px;
+  }
+  
+  
+/* DARK THEME */
+.dark-text-description{
+    padding-top: 80px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 30px;
+    color:#07dd8f;
+}
+
+.dark-body-container{
+    background-color:#313030;
+    padding-bottom: 600px;
+}
+
+/* Dropdown Button */
+.dark-button{
+    background-color: #0e0d0d;
+    color: #07dd8f;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    margin-left: 860px;
+    border: 1px solid #07dd8f;
+  }
+  

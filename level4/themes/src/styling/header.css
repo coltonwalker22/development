@@ -1,0 +1,31 @@
+.light-nav{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    background-color: #07dd8f
+
+    
+}
+
+.light-nav > h1{
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.dark-nav{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    background-color: #0e0d0d;
+    
+
+    
+}
+
+.dark-nav > h1{
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 30px;
+    color:#07dd8f
+}
