@@ -1,0 +1,8 @@
+.about-container{
+    height: 500px;
+}
+
+.about-container > p{
+    margin: 40px 40px;
+    font-size: 40px;
+}

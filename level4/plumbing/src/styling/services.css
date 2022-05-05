@@ -1,0 +1,26 @@
+.service-container{
+margin: 80px 80px;
+padding: 30px 30px;
+border: 1px solid black; 
+border-radius: 10px;
+box-shadow: 0 5px 10px rgb(0 0 0 / 0.3);
+}
+
+
+
+.service-title{
+font-size: 50px;
+letter-spacing: 12px;
+margin-bottom: 20px;
+}
+
+.service-description{
+font-size: 25px;
+margin-bottom: 20px;
+}
+
+.service-price{
+font-size: 30px;
+color: green;
+margin-left: 20px;
+}
