@@ -1,0 +1,52 @@
+# server side programming in Node with Expressions
+
+
+# Frontend for
+ * What the user sees and interacts with.
+
+# Backend
+ * The Server and the Database that the client interacts with
+
+# Servers
+ * Receivers requests from a Client or other server, and sends back a responseText
+
+ * Remote: Anything that is not your device
+ * Local: Running a server on your local machine
+
+
+# API 
+ * The program interface that takes and fullfills the server's request so the server can send a responseText
+
+# database
+ * Stores data for the applications
+
+
+ # HTTP 
+
+ GET: Fetches data (json)
+
+ POST: Saves data
+
+ PUT: updates data
+
+ DELETE: deletes data
+
+
+ # CRUD
+
+ CREATE => POST
+ READ => GET
+ UPDATE => PUT
+ DESTROY => DELETES
+
+
+ # Node 
+ 
+# Node MOdule
+ * A module is a file
+
+
+# Require - A function, (import)
+
+# Module.exports - (export)
+

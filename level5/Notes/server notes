@@ -1,0 +1,97 @@
+# Into to Express
+
+    # Initialize a new node project
+        -npm init -y
+
+        -npm install <dependencies>
+
+
+# VOCABULARY
+
+    # Route
+        * an event listender for http requests
+
+    #endpoint
+    * "/item" "/user"
+
+    #Port
+     * localhost:9000/
+
+
+# Nodemon
+    * npm install -g nodemon
+
+
+# Intro to REST API architecture
+
+# REST - representational State Transfer
+
+# Resource - Single item (object) in a database
+ /user/98fjhk213341jk321
+
+# Collection - a collection of similar items in a database
+/users
+
+# Base (root) URL - http://amazon.com/
+
+# API endpoint = http://amazon.com/movies/fh32432he4328
+
+# Paramters - /movies/:movieId
+
+# Query (query string) - /movies?genre=action&year=1999
+
+# Client - Frontend
+
+# Server - Intermediary
+
+# Request Method -  CRUD - GET POST PUT DELETE
+
+# Middleware - a function that fires on the inbetween
+
+# Requst Body (req.body)
+
+# UUID - creates unique Ids
+    -npm install uuid
+
+
+# Require - A function, (import)
+
+# Module.exports - (export)
+
+# URL Parameters
+
+# pars of the URL
+    * Base - http://amazon.com
+    * Endpoint - http://amazon.com/images
+    * Parameter - http://amazon.com/images/fd83428gr23
+    * Query - 
+
+# URL Queries
+    # Query Strings - (typically to filter results)
+        * Begins with the "?"
+        * Built of key=value pairs
+        * Multiple queries of separated by the "&".
+
+# Middleware
+
+# What is it?
+ * app.use()
+    1.(optional) - Mount Path (endpoint)
+    2.Callback function - receives the request, response objects, also the 'next' function
+
+# the "next" funciton
+    * Moves on to the middleware in line on our server
+
+
+# console errors in expess
+
+    # use a logger
+        *npm install morgan
+
+
+# connecting the front-end to the back-end
+
+    # folder structure
+    # Proxy
+
+    
