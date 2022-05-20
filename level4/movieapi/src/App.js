@@ -18,6 +18,7 @@ import './styling/header.css'
 import './styling/home.css'
 import './styling/moviepage.css'
 import './styling/footer.css'
+import './styling/movie.css'
 import './App.css';
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
       <Route path="/popular" element={<Popular />} />
       <Route path="/nowplaying" element={<NowPlaying />} />
       <Route path="/TopMovies" element={<TopMovies />} />
-      <Route path="/movie/:moviePage" element={<Movie />} />
+      <Route path="/movie/:id" element={<Movie id={4}/>} />
       <Route path="*" element={<ErrorPage/>} />
     </Routes>
     <Footer />

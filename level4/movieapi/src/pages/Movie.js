@@ -1,25 +1,53 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {MovieContext} from '../movieContextProvider';
+import {useParams} from 'react-router-dom'
+import axios from 'axios';
 
 
-function Movie(props) {
-    const {title, poster_path} = props;
+function Movie() {
+  let params = useParams();
+  let movie_id = useParams();
+  let {id} = useParams();
+  let newId = id.slice(1)
 
-    const {getPopMovies} = useContext(MovieContext);
+
+
+
+    const [movie, setMovie] = useState([])
+
 
     useEffect(() => {
-        getPopMovies();
+    axios.get(`https://api.themoviedb.org/3/movie/${newId}?api_key=${process.env.REACT_APP_MOVIEDB}&region=US`)
+      .then(res =>setMovie(res.data))
+      .catch(err => console.log(err))
     }, []);
+  
+
+    console.log("params:",params)
+    console.log(newId)
+    console.log(movie)
+  // console.log("movie:",movie)
+  // console.log("params:", params)
+  // console.log("movie_id:", movie_id)
+  // console.log("popMovies:",popMovies)
+  // console.log("nowPlaying:",nowPlaying)
+  // console.log("topMovies:", topMovies)
+  // console.log("searchMovies:", searchMovies)
   
   return (
     <>
-    <div className="popMovie-container">
+    <div className="Movie-container">
         <img 
-        src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-        width="150px"
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        width="300px"
         alt=""
         />
-        <div>{title}</div>
+        <div>{movie.title}</div>
+        <h4> Realse Date: {movie.release_date}</h4>
+        <p>{movie.overview}</p>
+        <h3>{`Budget: $ ${movie.budget}`}</h3>
+        <h3>{`Revenue: $ ${movie.revenue}`}</h3>
+        <a href={`${movie.homepage}`}>{movie.homepage}</a>
     </div>
     </>
   )

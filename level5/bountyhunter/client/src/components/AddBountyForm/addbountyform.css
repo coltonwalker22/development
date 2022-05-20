@@ -1,0 +1,85 @@
+/* 
+#663322
+#587059
+#EEDDCC
+#BB8855
+#887766
+*/
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #887766;
+    padding: 40px 40px;
+}
+
+#bountyForm{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #587059;
+    font-size:25px;
+    font-family: 'Poller One', cursive;
+    letter-spacing:5px;
+    color:#887766;
+    text-shadow: 2px 2px #000000;
+    border: 1px solid #000000;
+    padding: 30px 30px;
+}
+
+#bountyForm > div {
+    margin: 20px 0px;
+}
+
+#bountForm > hr {
+    margin: 0px;
+}
+
+.name-container > input {
+    height:30px;
+    width: 200px;
+    font-size:28px;
+}
+
+.name-container > input:nth-child(1n){
+    margin-right:5px;
+}
+
+.name-container > input:nth-child(2n){
+    margin-left:5px;
+}
+
+.type-container > select{
+    margin-top: 20px;
+    width: 300px;
+    height: 32px;
+    font-size: 25px;
+}
+
+.checkbox{
+    height: 20px;
+    width: 20px;
+    color: rgb(51, 42, 42);
+}
+
+.checkbox:checked {
+    background-color: rgb(51, 42, 42);
+}
+
+
+.credits-container > input{
+    margin-top: 10px;
+    height: 30px;
+    width: 200px;
+    font-size: 29px;
+}
+
+.submit-button{
+    margin-bottom: 10px;
+    height: 30px;
+    width: 90px
+}
+

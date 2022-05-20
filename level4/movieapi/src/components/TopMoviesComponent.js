@@ -1,7 +1,8 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 function TopMoviesComponent(props) {
-    const {title, poster_path} = props
+    const {title, poster_path, id} = props
   return (
     <div className="topRated-component">
     <img 
@@ -9,7 +10,7 @@ function TopMoviesComponent(props) {
     width="150"
     alt=""
     />
-    <div className="topRated-title">{title}</div>
+    <Link to={`/movie/:${id}`} className="topRated-title">{title}</Link>
 </div>
   )
 }

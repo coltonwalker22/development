@@ -30,7 +30,10 @@
 .popMovie-title{
 text-align: center;
 margin: 0 auto;
+margin-top: 5px;
 padding: 10px 0px;
+font-size: 15px;
+white-space: nowrap;
 }
 
 .popular-container > button {
@@ -63,11 +66,12 @@ margin-right: 20px;
     margin-bottom: 10px;
 }
 
-.nowPlaying-title{
-    
+.nowPlaying-title{   
     text-align: center;
     margin: 0 auto;
-    padding: 10px 0px;
+    margin-top: 5px;
+    padding: 20px 0px;
+    white-space: nowrap;
 }
 
 .topRated-container{
@@ -90,6 +94,7 @@ margin-right: 20px;
 
 .topRated-title{
 padding: 10px 0px;
+white-space: nowrap;
 
 }
 .error-page{

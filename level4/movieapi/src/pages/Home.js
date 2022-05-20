@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import PopMoviesComponent from '../components/PopMoviesComponent'
 import NowPlayingComponent from '../components/NowPlayingComponent'
 import TopMoviesComponent from '../components/TopMoviesComponent'
+import axios from 'axios';
 
 
 
@@ -20,12 +21,14 @@ function Home() {
     
     useEffect(() => {
         getPopMovies();
+        axios.get(`https://api.themoviedb.org/3/movie/675353?api_key=${process.env.REACT_APP_MOVIEDB}&region=US`)
+        .then(res => console.log("test:",res.data))
+        .catch(err => console.log(err))
         getNowPlaying();
         getTopMovies();
         // getSearchedMovies();
     }, []);
 
-const colors = "red"
   
     return (
         <>

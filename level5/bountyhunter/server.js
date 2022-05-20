@@ -1,16 +1,30 @@
-const express = require('express');
+const express = require('express')
+const morgan = require('morgan')
+const mongoose = require('mongoose')
 const app = express();
-const morgan = require('morgan');
 
-//middleware (for every request)
-app.use(express.json()) //looks for a request body, turns into a 'req.body'
-app.use(morgan('dev')) // logs request to the console
-//ROUTES//
 
-app.use("/jedi", require("./routes/jediRouter.js"))
-app.use("/sith", require("./routes/sithRouter.js"))
+app.use(express.json())
+app.use(morgan('dev'))
 
-// 1. PORT 2. CB FUNCTION
+
+//routes
+
+// Connect to mongoose
+mongoose.connect("mongodb+srv://walcol92:bounty@firstproject.vuoax.mongodb.net/?retryWrites=true&w=majority", () => {
+    console.log("connected to mongoDB")
+} )
+
+//get
+app.use("/bounties", require("./routes/bountiesRouter.js"))
+
+
+app.use((err, req, res, next) => {
+    console.log(err)
+    return res.send({errMsg: err.message})
+})
+
+
 app.listen(9000, () => {
-    console.log("The server is running on Port 9000. This is the way.")
+    console.log('The server is running on Port 9000. This is the way.')
 })

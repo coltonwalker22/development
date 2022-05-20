@@ -1,20 +1,11 @@
-
-import {useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Movie from '../pages/Movie'
 
 function PopMovies(props) {
-  let navigate = useNavigate();
+ 
 
-  const {title, poster_path } = props
-    
-  // const toComponent = () => {
-  //     navigate(`/Movie/${title}`);
-  //     <Movie 
-  //     title={title}
-  //     poster_path={poster_path}
-  //     />
-  //   }
-
+  const {title, poster_path, id} = props
+    console.log("pop movies component props:", props)
   return (
     <div className="popMovie-component">
         <img 
@@ -22,7 +13,9 @@ function PopMovies(props) {
         width="150px"
         alt=""
         />
-        <div className="popMovie-title">{title}</div>
+        <div className="popMovie-title">
+        <Link to={`/movie/:${id}`} >{title}</Link>
+        </div>
         {/* <button onClick={() => {toComponent()}}> More Info</button> */}
     </div>
   )

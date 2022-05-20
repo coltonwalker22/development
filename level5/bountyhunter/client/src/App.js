@@ -1,75 +1,89 @@
-import React, {useState, useEffect} from 'react';
-import './App.css';
-import axios from 'axios'
-import Bounties from './components/Bounties.js';
-import AddBountyForm from './components/AddBountyForm.js'
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
+import Header from './components/Header/Header.js'
+import Bounties from './components/Bounties/Bounties.js'
+import AddBountyForm from './components/AddBountyForm/AddBountyForm.js';
+
+import './components/Header/header.css'
+import './components/AddBountyForm/addbountyform.css'
+import './components/Bounties/bounties.css'
+import './App.css'
 
 function App() {
-  
-  const [jediBounties, setJediBounties] = useState([])
-  const [sithBounties, setSithBounties] = useState([])
 
+  const [bounties, setBounties] = useState([]);
+
+    // AXIOS REQUESTS
   function getBounties(){
-    axios.get('/jedi')
-    .then(res => setJediBounties(res.data))
-    .catch(err => console.log(err))
-    axios.get('sith')
-    .then(res => setSithBounties(res.data))
-    .catch(err => console.log(err))
+    axios.get('/bounties')
+      .then(res => setBounties(res.data))
+      .catch(err => console.log(err.res.data.errMsg))
   }
 
-  function addJedi(newJedi){
-    axios.post('/jedi', newJedi)
-      .then(res => 
-        setJediBounties(prevJedis => [...prevJedis, res.data]))
-      .catch(err => console.log(err))
+  function addBounty(newBounty){
+    axios.post('/bounties', newBounty)
+    .then(res =>  setBounties(prevBounty => [...prevBounty, res.data]))
+    .catch(err => console.log(err.res.data.errMsg))
   }
 
-  function deleteJediBounty(jediId){
-    axios.delete(`/jedi/${jediId}`)
-      .then(res => {
-        setJediBounties(prevJediBounty => prevJediBounty.filter(jedi => jedi._id !== jediId))
-      })
-      .catch(err => console.log(err))
-
-  }
-
-  function deleteSithBounty(sithId) {
-    axios.delete(`/sith/${sithId}`)
+  function deleteBounty(bountyId){
+    axios.delete(`/bounties/${bountyId}`)
     .then(res => {
-    setSithBounties(prevSithBounty => prevSithBounty.filter(sith => sith._id !== sithId))
+      setBounties(prevBounty => prevBounty.filter(bounty => bounty._id !== bountyId))
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err.res.data.errMsg))
   }
 
-  function editJediBounty(updates, jediId){
-    axios.put(`/jedi/${jediId}`, updates)
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+  function editBounty(updates, bountyId){
+    axios.put(`/bounties/${bountyId}`, updates)
+    .then(res => console.log(res))
+    .catch(err => console.log(err.res.data.errMsg))
   }
-
-
 
   useEffect(() => {
     getBounties();
   }, [])
 
 
+  function handleFilter(e){
+    if(e.target.value === "reset"){
+      getBounties()
+    } else {
+    axios.get(`/bounties/search/type?type=${e.target.value}`)
+      .then(res => setBounties(res.data))
+      .catch(err => console.log(err.res.data.errMsg))
+    }
+  }
+
+  console.log(setBounties)
   return (
+    <>
+    <Header />
     <div className="bounty-container">
-      <AddBountyForm  
-      submit={addJedi}
-      btnText="Add Movie"
+      <AddBountyForm
+      submit={addBounty}
+      btnText="Add Bounty"
       />
-      { jediBounties.map(jediBounty => <Bounties 
-      {...jediBounty} 
-      key={jediBounty.lastName} 
-      deleteJediBounty={deleteJediBounty}
-      editJediBounty={editJediBounty}
-      />)}
-      { sithBounties.map(sithBounty => <Bounties {...sithBounty} key={sithBounty.lastName} deleteSithBounty={deleteSithBounty}/>)}
+
+    <div className="filter-container">
+      <h3>Filter by Alignment:</h3>
+      <select onChange={handleFilter} className="filter-form">
+        <option value="reset">All Alignments</option>
+        <option value="jedi">jedi</option>
+        <option value="sith">sith</option>
+      </select>
+
     </div>
+      {bounties.map(bounty => <Bounties
+      {...bounty}
+      key={bounty.lastName}
+      deleteBounty={deleteBounty}
+      editBounty={editBounty}
+      />)}
+    </div>
+ 
+    </>
   );
 }
 

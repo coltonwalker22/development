@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function NowPlayingPageComponent(props) {
-    const {title, poster_path} = props
+    const {title, poster_path, id} = props
   return (
         <div className="NowPlaying-page-component">
     <img 
@@ -9,7 +10,8 @@ function NowPlayingPageComponent(props) {
     width="150"
     alt=""
     />
-    <div>{title}</div>
+    <div></div>
+    <Link to={`/movie/:${id}`}>{title}</Link>
 </div>
   )
 }
