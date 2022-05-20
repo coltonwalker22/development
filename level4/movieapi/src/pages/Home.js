@@ -81,8 +81,4 @@ export default Home
 
 
 //TO DO
-
-// DO CSS FOR TOP RATED. do grid-template-area so that the top rated section can sit underneath popular movies.
-// CREATE THE TOP RATED PAGE. so that the list of 20 top rated movies can be seen.
-//  CSS DESIGN THE HOME AND OTHER PAGES. needs to be better looking.
-// FIGURE OUT THE SEARCH ABILITY. getting 403. something wrong with the get request is being called.
+// Continue on having a search capability in the header.

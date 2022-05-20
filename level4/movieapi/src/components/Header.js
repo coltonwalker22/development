@@ -13,19 +13,19 @@ function Header(props) {
 
 // const [APIData, setAPIData] = useState([]);
 //   const [filteredResults, setFilteredResults] = useState([]);
-  const [searchInput, setSearchInput] = useState('');
+//   const [searchInput, setSearchInput] = useState('');
 
-  useEffect(() => {
-    getSearchedMovies();
-  }, [])
+//   useEffect(() => {
+//     getSearchedMovies();
+//   }, [])
 
-  function getSearchedMovies(){
-    return axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIEDB}&region=US&query=${setSearchInput}`)
-    .then( ({data: {results}}) => setSearchInput(results))
-    .catch(err => console.log(err))
-}
+//   function getSearchedMovies(){
+//     return axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIEDB}&region=US&query=${setSearchInput}`)
+//     .then( ({data: {results}}) => setSearchInput(results))
+//     .catch(err => console.log(err))
+// }
 
-console.log(searchInput)
+// console.log(searchInput)
 // const searchItems = (searchValue) => {
 //   setSearchInput(searchValue)
 //   if(searchInput !== '') {
@@ -47,10 +47,10 @@ console.log(searchInput)
   return (
   <div className="header-container">
     <h1> MOVIES FTW</h1>
-    <input
+    {/* <input
     icon='search'
-    // onChange={(e) => searchItems(e.target.value)}
-    ></input>
+    onChange={(e) => searchItems(e.target.value)}
+    ></input> */}
     {/* <button onClick={() => {navigate("/Searched")}}>search</button> */}
     
     
