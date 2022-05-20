@@ -18,14 +18,17 @@ function Movie() {
 
     useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/movie/${newId}?api_key=${process.env.REACT_APP_MOVIEDB}&region=US`)
-      .then(res =>setMovie(res.data))
+      .then((res) => {
+        if(res.data.id !== movie.id){
+          setMovie(res.data)
+        }})
       .catch(err => console.log(err))
-    }, []);
+    }, [newId]);
   
 
     console.log("params:",params)
     console.log(newId)
-    console.log(movie)
+    console.log("movie:",movie)
   // console.log("movie:",movie)
   // console.log("params:", params)
   // console.log("movie_id:", movie_id)

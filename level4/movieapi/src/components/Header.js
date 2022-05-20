@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import {MovieContext} from '../movieContextProvider';
 import {useNavigate} from 'react-router-dom'
-import SearchedComponent from '../components/SearchedComponent';
 import axios from 'axios';
 
 
@@ -13,19 +13,31 @@ function Header(props) {
 
 // const [APIData, setAPIData] = useState([]);
 //   const [filteredResults, setFilteredResults] = useState([]);
-//   const [searchInput, setSearchInput] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
-//   useEffect(() => {
-//     getSearchedMovies();
-//   }, [])
+  const [searchField , setSearchField] = useState('');
 
-//   function getSearchedMovies(){
-//     return axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIEDB}&region=US&query=${setSearchInput}`)
-//     .then( ({data: {results}}) => setSearchInput(results))
-//     .catch(err => console.log(err))
-// }
 
-// console.log(searchInput)
+
+  // useEffect(() => {
+  //   getSearchedMovies();
+  // }, [])
+
+  function getSearchedMovies(searchInput){
+    return axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIEDB}&region=US&query=${searchInput}`)
+    .then( ({data: {results}}) => setSearchResults(results))
+    .catch(err => console.log(err))
+}
+
+function handleInput(e){
+  setSearchField(e.target.value);
+  getSearchedMovies(e.target.value)
+    .then(() => console.log(searchResults))
+  
+}
+
+
+
 // const searchItems = (searchValue) => {
 //   setSearchInput(searchValue)
 //   if(searchInput !== '') {
@@ -47,14 +59,17 @@ function Header(props) {
   return (
   <div className="header-container">
     <h1> MOVIES FTW</h1>
-    {/* <input
-    icon='search'
-    onChange={(e) => searchItems(e.target.value)}
-    ></input> */}
-    {/* <button onClick={() => {navigate("/Searched")}}>search</button> */}
-    
-    
+    <div className="search-container">
+      <input  value={searchField} onInput={handleInput}/>
+        <div className="search-results" style={{display: searchField ? 'initial' : 'none'}}>
+          <ul>{searchResults.slice(0,3).map(result =>
+            <li>
+              <Link to={`/movie/:${result.id}`}>{result.title}</Link>
+            </li>
+        )}</ul>
+      </div>
   </div>
+</div>
   )
 }
 

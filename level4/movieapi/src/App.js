@@ -40,7 +40,7 @@ function App() {
       <Route path="/popular" element={<Popular />} />
       <Route path="/nowplaying" element={<NowPlaying />} />
       <Route path="/TopMovies" element={<TopMovies />} />
-      <Route path="/movie/:id" element={<Movie id={4}/>} />
+      <Route path="/movie/:id" element={<Movie />} />
       <Route path="*" element={<ErrorPage/>} />
     </Routes>
     <Footer />

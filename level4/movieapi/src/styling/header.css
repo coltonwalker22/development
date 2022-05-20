@@ -1,25 +1,43 @@
 .header-container{
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgb(117, 6, 6);
-    height: 120px;
     margin-bottom: 40px;
 }
 
 .header-container > h1 {
-    display: inline-block;
     letter-spacing: 20px;
-    margin-top: 0px;
+    margin: 0;
     font-size: 80px;
-    margin-left: 20px;
+    padding: 20px;
+    color: rgb(231, 228, 228);
 }
 
-.header-container > input {
- float: right;
- height: 30px;
- width: 400px;
- margin-top: 40px;
- margin-right: 200px;
- border: 1px solid black;
+.header-container > div {
+ padding: 40px;
+}
+
+.header-container div input{
+    width: 300px;
+    font-size:30px;
+}
+
+.search-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.search-results{
+    border: 1px solid black;
+    position: absolute;
+    display: inline-block;
+    background-color: white;
+    margin-top: 40px;
+    padding: 10px 20px;
+    max-width: 308px;
+
 }
 
 @media only screen and (max-width: 1350px){
@@ -83,3 +101,4 @@
     }
 
 }
+
