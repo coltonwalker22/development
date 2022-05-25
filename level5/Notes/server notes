@@ -155,9 +155,9 @@ git merge
 4. clone the repository
     -git clone <posted command github>
 5. Create a feature branch
-    - git branch server-setup
+    - git branch (name of branch)
 6. Checkout to that branch
-    - git checkout server-setup
+    - git checkout (name of branch)
 7. Commit and push branch to github
     -git add -A
     -git commit -m "init commit"

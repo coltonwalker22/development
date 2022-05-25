@@ -1,8 +1,8 @@
-
+import React, {useRef} from 'react'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 
-import './App.css';
+import './App.scss';
 
 
 function App() {
