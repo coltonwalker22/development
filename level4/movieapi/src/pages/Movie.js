@@ -26,8 +26,8 @@ function Movie() {
     }, [newId]);
   
 
-    console.log("params:",params)
-    console.log(newId)
+    // console.log("params:",params)
+    console.log("newId:", newId)
     console.log("movie:",movie)
   // console.log("movie:",movie)
   // console.log("params:", params)

@@ -62,7 +62,7 @@ function handleInput(e){
     <div className="search-container">
       <input  value={searchField} onInput={handleInput}/>
         <div className="search-results" style={{display: searchField ? 'initial' : 'none'}}>
-          <ul>{searchResults.slice(0,3).map(result =>
+          <ul>{searchResults.slice(0,5).map(result =>
             <li>
               <Link to={`/movie/:${result.id}`}>{result.title}</Link>
             </li>

@@ -39,4 +39,3 @@ if (step % 2 == 0){
     state = state + 1;
 }
 frameRate(1);
-}

@@ -113,10 +113,71 @@ https://http.cat
 # connect
 
 
-# Nongoose Schemas
+# Mongoose Schemas
     * Blueprints for our data
 
 # Mongoose Models
     * Models have a Name, and a Blueprint (Schema)
     * Models are used to perform the CRUD operations on data created with model
-    
+
+
+
+----------------
+
+# one to one
+# one to many
+# many to many
+
+
+
+----------------
+
+# using github
+
+# Git Collaboration
+
+git branch
+
+git checkout
+
+git merge
+
+
+# Start The Repo, clone master
+
+1. Create git repository on github
+2. connect/clone locally 
+3. Set up the code base
+    -git add -A
+    -git commit -m "init commit"
+    -git push
+~~
+4. clone the repository
+    -git clone <posted command github>
+5. Create a feature branch
+    - git branch server-setup
+6. Checkout to that branch
+    - git checkout server-setup
+7. Commit and push branch to github
+    -git add -A
+    -git commit -m "init commit"
+    -git push
+8. git checkout master
+9. Pull down remote master
+    -git pull
+10. Checkout back to local branch
+    - git checkout server-setup
+
+11. merge local master into local branch
+    - git merge --no--ff master
+    - if goes well
+        - shift + ZZ
+    - if goes badly
+        - resolve conflicts locally
+12. push branch to github
+    - git add -A
+    - git commit -m "init commit"
+    - git push
+13. Create PR on github
+14. Git checkout to master & git pull
+
