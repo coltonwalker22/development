@@ -1,0 +1,57 @@
+.my-work-heading{
+    color: rgb(209, 209, 209);
+    font-family:  Montserrat;
+}
+
+
+.my-work {
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 100%;
+}
+.my-work-heading{
+    font-size: 3rem;
+    text-align: center;
+}
+.carousel-wrapper{
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+}
+.carousel{
+    display: flex;
+    justify-content: center;
+}
+.carousel .slide{
+    height: fit-content;
+}
+.carousel .slide img{
+    box-shadow: 0 20px 10px -10px;
+    margin-bottom: 1em;
+    pointer-events: none;
+}
+.carousel .control-dots{
+    /* just using this for reference */
+    bottom: 0;
+    background: red;
+    display: none;
+  }
+.project-heading{
+    margin: .5em;
+    text-decoration: underline;
+}
+.col2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.col2 a{
+    color: black
+}
+.project-container button{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color:#5bb462;
+}

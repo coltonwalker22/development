@@ -1,0 +1,69 @@
+.about-section {
+    display: flex;
+    width: 100%
+}
+
+.about-container {
+    display: inline-block;
+}
+
+.about-img {
+    margin: 90px 200px 10px 400px;
+}
+
+.about-img > img {
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 10px -10px;
+}
+
+.about-me {
+margin-top: 40px;
+}
+
+.about-me > h1 {
+    font-size: 50px;
+    font-family: Montserrat;
+    letter-spacing: 10px;
+    color: rgb(209, 209, 209);
+}
+
+.about-me > p {
+    margin-right: 250px;
+    font-size: 25px;
+    font-family: Montserrat;
+    line-height: 1.5em;
+    color: rgb(209, 209, 209);
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 400px;
+}
+
+
+
+.button-link {
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(114, 13, 13);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+
+.button:hover{
+    background-color: rgb(68, 11, 11);
+    transition: .3s;
+}

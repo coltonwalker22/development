@@ -1,0 +1,67 @@
+.slide-effect {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    color: rgb(209, 209, 209);
+  }
+
+.slideDown, .slideUp {
+  position: relative;
+  font-family: Montserrat;
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  opacity:0;
+}
+  
+
+  
+.slideDown {
+  top:-40px;
+  left:5px;
+  animation: slideDown ease .4s forwards .6s;
+}
+  
+.slideUp {
+  top:40px;
+  left:10px;
+  animation: slideUp ease .5s forwards 1.2s;
+}
+
+.fade-in-text {
+  display: flex;
+  font-family: Montserrat;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(209, 209, 209);
+}
+
+.fade-text {
+  animation: fadeIn 8s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-40px);opacity:1;}
+}
+
+@keyframes slideDown {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(40px);opacity:1;}
+}
+@media only screen and (max-width: 600px) {
+  .slide-effect, .text, .slideDown, .slideUp, .fade-text {
+    font-size: 20px;
+  }
+}

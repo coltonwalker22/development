@@ -1,0 +1,8 @@
+.contact-container h1{
+    display: flex;
+    font-family: Montserrat;
+    color: rgb(209, 209, 209);
+    font-size: 60px;
+    align-items: center;
+    justify-content: center;
+}

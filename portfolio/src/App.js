@@ -1,19 +1,24 @@
-import React, {useRef} from 'react'
-import Header from './components/Header.js'
-import Footer from './components/Footer.js'
 
-import './App.scss';
 
+import Header from './components/Header/Header.js';
+import About from './components/About/About.js';
+import Projects  from './components/Projects/project.js';
+import Contact from './components/Contact/Contact.js'
+
+import './App.css';
+import './components/Header/header.css'
+import './components/About/about.css'
+import './components/Projects/projects.css'
+import './components/Contact/contact.css'
 
 function App() {
   return (
-    <>
-    <Header />
     <div className="App">
-     hello world
+      <Header />
+      <About />
+      <Projects />
+      <Contact />
     </div>
-    <Footer />
-    </>
   );
 }
 
