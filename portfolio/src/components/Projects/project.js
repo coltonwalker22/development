@@ -13,10 +13,10 @@ export default function Projects() {
                     >
                 <div className="project-container">
                     <h3 className='project-heading'>Softball Website</h3>
-                    <img src="colton.png" alt="" className='project-image' />
+                    <img src="movieapi.png" alt="" className='project-image' />
                     <div className='col2'>
                         <button className='view-code-btn' >
-                            <a target="_blank" href="https://github.com/Jaconn4242/Rock-Springs-Angels" rel="noopener noreferrer">View Code</a>
+                            <a target="_blank" href="https://github.com/coltonwalker22/development/tree/master/level4/movieapi" rel="noopener noreferrer">View Code</a>
                         </button>
                         <button className='view-site-btn'>
                         <a target="_blank" href="https://rockspringsangels.com" rel="noopener noreferrer">View Site</a>
