@@ -12,39 +12,39 @@ export default function Projects() {
                       autoPlay
                     >
                 <div className="project-container">
-                    <h3 className='project-heading'>Softball Website</h3>
-                    <img src="movieapi.png" alt="" className='project-image' />
+                    <h3 className='project-heading'>Movie FTW</h3>
+                    <img src="images/movieapi.png" alt="" className='project-image' />
                     <div className='col2'>
-                        <button className='view-code-btn' >
-                            <a target="_blank" href="https://github.com/coltonwalker22/development/tree/master/level4/movieapi" rel="noopener noreferrer">View Code</a>
-                        </button>
-                        <button className='view-site-btn'>
-                        <a target="_blank" href="https://rockspringsangels.com" rel="noopener noreferrer">View Site</a>
-                        </button>
+                        <div className='view-code-btn' >
+                            <a target="_blank" href="https://github.com/coltonwalker22/movieapi" className="button-link" rel="noopener noreferrer">View Code</a>
+                        </div>
+                        <div className='view-site-btn'>
+                        <a target="_blank" href="https://movieftw.netlify.app" className="button-link" rel="noopener noreferrer">View Site</a>
+                        </div>
                     </div>
                 </div>
                 <div className="project-container">
                     <h3 className='project-heading'>DJ React</h3>
-                    <img src="colton.png" alt="" className='project-image' />
+                    <img src="images/djreact.png" alt="" className='project-image' />
                     <div className='col2'>
-                        <button className='view-code-btn'>
-                            <a target="_blank" href="https://github.com/Jaconn4242/assignments/tree/main/Level-3/dj-react" rel="noopener noreferrer">View Code</a>
-                        </button>
-                        <button className='view-site-btn'>
-                            <a href="https://dj-react-jeff.netlify.app/" rel="noopener noreferrer">View Site</a>
-                        </button>
+                        <div className='view-code-btn'>
+                            <a target="_blank" href="https://github.com/coltonwalker22/djreact" className="button-link" rel="noopener noreferrer">View Code</a>
+                        </div>
+                        <div className='view-site-btn'>
+                            <a href="https://coltonsdjreact.netlify.app/"  className="button-link" rel="noopener noreferrer">View Site</a>
+                        </div>
                     </div>
                 </div>
                 <div className="project-container">
                     <h3 className='project-heading'>Meme Generator</h3>
-                    <img src="colton.png" alt="" className='project-image' />
+                    <img src="images/memegenerator.png" alt="" className='project-image' />
                     <div className='col2'>
-                    <button className='view-code-btn'>
-                            <a target="_blank" href="https://github.com/Jaconn4242/assignments/tree/main/Level-3/meme-generator" rel="noopener noreferrer">View Code</a>
-                        </button>
-                        <button className='view-site-btn' >
-                            <a target="_blank" href="https://meme-generator-jeff.netlify.app/" rel="noopener noreferrer">View Site</a>
-                        </button>
+                    <div className='view-code-btn'>
+                            <a target="_blank" href="https://github.com/coltonwalker22/memegenerator" className="button-link" rel="noopener noreferrer">View Code</a>
+                        </div>
+                        <div className='view-site-btn' >
+                            <a target="_blank" href="https://colton-memegenerator.netlify.app/" className="button-link" rel="noopener noreferrer">View Site</a>
+                        </div>
                     </div>
                 </div>
             </Carousel>

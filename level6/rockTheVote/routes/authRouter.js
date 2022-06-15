@@ -4,7 +4,7 @@ const User = require('../models/user.js')
 const jwt = require('jsonwebtoken')
 
 //signup
-authRouter.post('/sign', (req, res, next) => {
+authRouter.post('/signup', (req, res, next) => {
     User.findOne({username: req.body.username.toLowerCase()}, (err, user) => {
         if(err){
             res.status(500)

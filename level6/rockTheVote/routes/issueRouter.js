@@ -1,88 +1,88 @@
-
 const express = require('express');
-const commentRouter = express.Router();
-const Comment = require('../models/comment');
+const issueRouter = express.Router();
+const Issue = require('../models/issue');
 
-commentRouter.get('/', (req, res, next) => {
-    Comment.find((err, comments) => {
+issueRouter.get('/', (req, res, next) => {
+    Issue.find((err, issues) => {
         if(err){
             if(er){
                 res.status(500)
                 return next(err)
             }
-            return res.status(20).send(comments)
+            return res.status(20).send(issues)
         }
     })
 })
 
 //get comments by user id
-commentRouter.get('/user', (req, res, next) => {
-    Comment.find( {user: req.auth._id}, (err, comments) => {
+issueRouter.get('/user', (req, res, next) => {
+    Issue.find( {user: req.auth._id}, (err, issues) => {
         if(err){
             if(err){
                 res.status(500)
                 return next(err)
             }
-            return res.status(200).send(comments)
+            return res.status(200).send(issues)
         }
     })
 })
 
-commentRouter.post('/', (req, res, next) => {
+//add new issue
+issueRouter.post('/', (req, res, next) => {
     req.body.user = req.auth._id
-    const newComment = new Comment(req.body);
-    newComment.save((err, savedComment) => {
+    const newIssue = new Issue(req.body);
+    newIssue.save((err, savedIssue) => {
         if(err) {
             res.status(500);
             return next(err);
         }
-        return res.status(201).send(savedComment)
+        return res.status(201).send(savedIssue)
     })
 })
 
-//find a comment by id
-commentRouter.get('/:commentId', (req, res, next) => {
-    Comment.findById(req.params.commentId, (err, comment) => {
+//find a issue by id
+issueRouter.get('/:issueId', (req, res, next) => {
+    Issue.findById(req.params.issueId, (err, issue) => {
         if(err) {
             res.status(500);
             return next(err)
-        } else if (!comment) {
+        } else if (!issue) {
             res.status(404)
-            return next(new Error("no comment found."))
+            return next(new Error("no issue found."))
         }
-        return res.send(comment);
+        return res.send(issue);
     })
 })
 
-//delete comment by the Id
-commentRouter.delete("/:commentId", (req, res, next) => {
-    Comment.findByAndRemove(
-        {_id: req.params.commentId, user: req.auth._id},
-        (err, comment) => {
+//delete issue by the Id
+issueRouter.delete("/:issueId", (req, res, next) => {
+    Issue.findByAndRemove(
+        {_id: req.params.issueId, user: req.auth._id},
+        (err, issue) => {
             if (err) {
                 res.status(500)
                 return next(err)
             }
-            return res.send(comment)
+            return res.send(issue)
         }
     )
 })
 
-// update comment
-commentRouter.put('/commentId', (req, res, next) => {
-    Comment.findByIdAndUpdate(
-        {_id: req.params.commentId, user: req.auth._id},
+// update issue
+issueRouter.put('/issueId', (req, res, next) => {
+    Issue.findByIdAndUpdate(
+        {_id: req.params.issueId, user: req.auth._id},
         req.body,
         {new: true},
-        (err, comment) => {
+        (err, issue) => {
             if (err) {
                 console.log("Error")
                 res.status(500)
                 return next(err)
             }
-            return res.send(comment)
+            return res.send(issue)
         }
     )
 })
 
-module.exports = commentRouter
+module.exports = issueRouter

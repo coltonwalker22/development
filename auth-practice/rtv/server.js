@@ -18,9 +18,9 @@ mongoose.connect(
 
 app.use('/auth', require('./routes/authRouter.js'))
 app.use('/api', jwt({secret: process.env.SECRET, algorithms: ["HS256"]}))
-app.use('/api/user', require('./routes/userRouter.js.js'))
-app.use('./api/user/comment', require('./routes/commentrouter.js.js'))
-app.use('./api/user/comment', require('./routes/commentrouter.js.js'))
+app.use('/api/user', require('./routes/userRouter.js'))
+app.use('./api/user/comment', require('./routes/commentrouter.js'))
+app.use('./api/user/comment', require('./routes/commentrouter.js'))
 
 app.use((err, req, res, next) => {
     console.log(err)

@@ -46,12 +46,39 @@
     justify-content: space-around;
 }
 .col2 a{
-    color: black
+    color: rgb(211, 211, 211)
 }
-.project-container button{
-    width: 200px;
-    height: 30px;
-    border: none;
+.view-code-btn, .view-site-btn{
+    display: flex;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(114, 13, 13);
     border-radius: 10px;
-    background-color:#5bb462;
+    align-items: center;
+    justify-content: center;
+    color: rgb(209, 209, 209);
+    font-family:  Montserrat;
+}
+
+.view-code-btn:hover{
+    background-color: rgb(68, 11, 11);
+    transition: .3s;
+}
+
+.view-site-btn:hover{
+    background-color: rgb(68, 11, 11);
+    transition: .3s;
+}
+
+.button-link{
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.project-heading{
+    color: rgb(209, 209, 209);
+    font-family:  Montserrat;
+    font-size: 25px;
 }
