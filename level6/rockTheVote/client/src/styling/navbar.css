@@ -1,0 +1,14 @@
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: gray;
+    height: 50px;
+    font-size: 36px;
+
+}
+
+.navbar button {
+    height: 30px;
+    margin-top: 10px;
+}

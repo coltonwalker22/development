@@ -6,7 +6,7 @@ const issueScehma = new Schema({
         type: String,
         required: true
     },
-    comment: {
+    description: {
         type: String,
         required: true
     },
@@ -14,7 +14,19 @@ const issueScehma = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true
-    }
+    },
+    datePosted: {
+        type: Date,
+        default: Date.now
+    },
+    upVotes: [{
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    }],
+    downVotes: [{
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    }]
 })
 
 

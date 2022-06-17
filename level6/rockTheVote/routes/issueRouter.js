@@ -5,25 +5,22 @@ const Issue = require('../models/issue');
 issueRouter.get('/', (req, res, next) => {
     Issue.find((err, issues) => {
         if(err){
-            if(er){
-                res.status(500)
-                return next(err)
-            }
-            return res.status(20).send(issues)
-        }
-    })
-})
-
-//get comments by user id
-issueRouter.get('/user', (req, res, next) => {
-    Issue.find( {user: req.auth._id}, (err, issues) => {
-        if(err){
-            if(err){
                 res.status(500)
                 return next(err)
             }
             return res.status(200).send(issues)
-        }
+        })
+})
+
+
+//get issues by user id
+issueRouter.get('/user', (req, res, next) => {
+    Issue.find( {user: req.auth._id}, (err, issues) => {
+        if(err){           
+                res.status(500)
+                return next(err)
+            }   
+            return res.status(200).send(issues)
     })
 })
 
