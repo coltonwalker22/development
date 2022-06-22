@@ -82,4 +82,56 @@ issueRouter.put('/issueId', (req, res, next) => {
     )
 })
 
+issueRouter.put("/:issueId/upvote", (req, res, next) => {
+    Issue.findOneAndUpdate(
+        {_id: req.params.issueId},
+        { $pull: {downVotes: req.auth._id}, $addToSet: {upVotes: req.auth._id}},
+        {new: true},
+        (err, updatedIssue) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send(updatedIssue)
+        }
+    );
+});
+
+//downvote request
+issueRouter.put("/:issueId/downvote", (req, res, next) => {
+    Issue.findOneAndUpdate(
+        {_id: req.params.issueId},
+        { $pull: {upVotes: req.auth._id}, $addToSet: {downVotes: req.auth._id}},
+        {new: true},
+        (err, updatedIssue) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            console.log(req)
+            return res.status(200).send(updatedIssue)
+        }
+    );
+});
+
+//delete vote
+issueRouter.put("/:issueId/remove", (req, res, next) => {
+    Issue.findOneAndUpdate(
+        {_id: req.params.issueId},
+        { $pull: {upVotes: req.auth._id, downVotes: req.auth._id}},
+        {new: true},
+        (err, updatedIssue) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send(updatedIssue)
+        }
+    );
+});
+
+// add to set, 2 and 1 fuction create http request.
+//put request updating model
+
+
 module.exports = issueRouter

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 
+
 export const UserContext = React.createContext()
 
 const userAxios = axios.create()
@@ -12,6 +13,7 @@ userAxios.interceptors.request.use(config => {
 })
 
 export default function UserProvider(props){
+    
     const initState = { 
         user:  JSON.parse(localStorage.getItem('user')) || {}, 
         token: localStorage.getItem('token') || "", 
@@ -118,7 +120,9 @@ export default function UserProvider(props){
             logout,
             addIssue,
             getAllIssues,
-            resetAuthErr
+            resetAuthErr,
+            getUserIssues,
+            userAxios
         }}
         >
             { props.children}

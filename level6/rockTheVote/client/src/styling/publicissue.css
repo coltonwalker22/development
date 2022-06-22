@@ -15,8 +15,58 @@
     width: 400px;
     grid-template-rows: 100px 100px;
     margin: 80px 80px;
+    box-shadow: 5px 5px 10px;
 }
 
 .publicIssue h2{
     font-size: 17px;
+}
+
+
+.vote-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vote-container img{
+    margin-left: 20px;
+}
+
+.comment-button{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height:20px;
+    width: 130px;
+    padding: 10px 10px;
+    border:1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(193, 55, 221);
+}
+
+.comment-button:hover{
+    background-color: rgb(129, 22, 133);
+    transition-duration: .6s;
+}
+
+.delete-button{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height:20px;
+    width: 130px;
+    padding: 10px 10px;
+    border:1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(193, 55, 221);
+}
+
+.delete-button:hover{
+    background-color: rgb(129, 22, 133);
+    transition-duration: .6s;
 }
