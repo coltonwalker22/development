@@ -23,6 +23,7 @@ export default function UserProvider(props){
 
     const [userState, setUserState] = useState(initState)
     const [allIssues, setAllIssues] = useState([])
+    const [allUsers, setAllUsers] = useState([])
 
     function signup(credentials) {
         axios.post('/auth/signup', credentials)
@@ -108,6 +109,12 @@ export default function UserProvider(props){
         .then(res => setAllIssues(res.data))
         .catch(err => console.log(err.response.data.errMsg))
 }
+
+    function getAllUsers(){
+        userAxios.get('/api/user')
+            .then(res => setAllUsers(res.data))
+            .catch(err => console.log(err.response.data.errMsg))
+    }
   
 
     return(
@@ -122,6 +129,8 @@ export default function UserProvider(props){
             getAllIssues,
             resetAuthErr,
             getUserIssues,
+            getAllUsers,
+            allUsers,
             userAxios
         }}
         >

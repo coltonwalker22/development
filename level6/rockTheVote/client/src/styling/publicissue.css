@@ -70,3 +70,43 @@
     background-color: rgb(129, 22, 133);
     transition-duration: .6s;
 }
+
+.upvote-icon{
+    font-size: 100px;
+ 
+}
+
+
+.upvote-container{
+    margin-right: 60px;
+    padding: 15px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+
+.upvote-container:hover{
+    background-color: rgba(180, 232, 253, 0.815);
+    transition-duration: .6s
+}
+
+.downvote-icon{
+    font-size: 100px;
+}
+
+.downvote-container{
+    padding: 15px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+
+.downvote-container:hover{
+    background-color: rgba(231, 42, 9, 0.568);
+    transition-duration: .6s
+}
+
+
+.add-comment{
+    margin-right: 20px;
+}

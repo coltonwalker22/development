@@ -83,6 +83,7 @@ issueRouter.put('/issueId', (req, res, next) => {
 })
 
 issueRouter.put("/:issueId/upvote", (req, res, next) => {
+    console.log(req)
     Issue.findOneAndUpdate(
         {_id: req.params.issueId},
         { $pull: {downVotes: req.auth._id}, $addToSet: {upVotes: req.auth._id}},

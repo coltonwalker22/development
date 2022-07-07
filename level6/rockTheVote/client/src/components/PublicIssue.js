@@ -1,16 +1,18 @@
 import React, {useState, useEffect, useContext} from 'react'
 import {UserContext} from '../context/UserProvider2.js'
-import upvoteimage from '../images/upvote.png'
-import downvoteimage from '../images/downvote.png'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faThumbsUp } from '@fortawesome/free-regular-svg-icons'
+import { faThumbsDown } from '@fortawesome/free-regular-svg-icons'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 // import axios from 'axios'
 
 // const userAxios = axios.create()
 
 export default function PublicIssue(props) {
-    const {user, title, description, datePosted, _id, upVotes, downVotes} = props
+    const {author, title, description, datePosted, _id, upVotes, downVotes} = props
 
     
-    const { user: { username }, userAxios, getUserIssues} = useContext(UserContext)
+    const { userAxios, getUserIssues, user, allUsers } = useContext(UserContext)
     
     const [issueComments, setIssueComments] = useState([])
     
@@ -19,6 +21,10 @@ export default function PublicIssue(props) {
     const initInputs = {comment: ""}
     
     const [inputs, setInputs] = useState({initInputs})
+
+    const [ upVoteCount, setUpVoteCount] = useState(upVotes)
+
+    const [ downVoteCount, setDownVoteCount] = useState(downVotes)
 
     function newGetComments(issueId){
         userAxios.get(`api/issue/comments/${issueId}/comments`)
@@ -43,46 +49,64 @@ export default function PublicIssue(props) {
         setInputs({ comment: ""});
     }
 
-    function handleUpVote(e){
-        e.preventDefault()
-        // if(upVotes.includes(user._id)){
-        //     handleRemoveVote(_id)
-        // } else{
-        const vote = _id
-        console.log("it worked!")
-        userAxios.put(`api/issue/${vote}/upvote`)
-          .then(res => console.log(res.data))
-          .catch(err => console.log(err))
-        // }
-      }
-    
-    function handleDownVote(e){
-        e.preventDefault()
-        const vote = _id
-        if(downVotes.includes(user._id)){
-            console.log("user",user)
-            handleRemoveVote(_id)
-        } else{
-          console.log("user",user)
-          userAxios.put(`api/issue/${vote}/downvote`)
-            .then(res => console.log(res.data))
+    function handleVote(action){
+        if(upVoteCount.includes(user._id) && action === "upvote"){
+            userAxios.put(`api/issue/${_id}/remove`)
+                .then(res => {
+                    setUpVoteCount(res.data.upVotes)
+                    setDownVoteCount(res.data.downVotes)            
+                })
             .catch(err => console.log(err))
+
+        } else if(downVoteCount.includes(user._id) && action === "downvote"){
+            userAxios.put(`api/issue/${_id}/remove`)
+                .then(res => {
+                    setUpVoteCount(res.data.upVotes)
+                    setDownVoteCount(res.data.downVotes)            
+                })
+            .catch(err => console.log(err))
+        } else {
+            userAxios.put(`api/issue/${_id}/${action}`)
+                .then(res => {
+                    setUpVoteCount(res.data.upVotes)
+                    setDownVoteCount(res.data.downVotes)            
+                })
+              .catch(err => console.log(err))
         }
     }
 
-    function handleRemoveVote(e){
-        e.preventDefault()
-        console.log("clicked")
-            const vote = _id
-            userAxios.put(`api/issue/${vote}/remove`)
-                .then(res => console.log(res.data))
-                .catch(err => console.log(err))
-    }
+
+    // function handleUpVote(){
+    //     if(upVotes.includes(user)) return // contains will not compile
+    //     userAxios.put(`api/issue/${_id}/upvote`)
+    //       .then(res => {
+    //         setUpVoteCount(res.data.upVotes.length)
+    //         setDownVoteCount(res.data.downVotes.length)            
+    //       })
+    //       .catch(err => console.log(err))
+    //   }
     
-    // function getUsername(){
-    //     const person = user
-    //     if()
+    // function handleDownVote(){
+    //     if(downVotes.includes(user))  return      
+    //       userAxios.put(`api/issue/${_id}/downvote`)
+    //         .then(res => {
+    //             setDownVoteCount(res.data.downVotes.length)            
+    //             setUpVoteCount(res.data.upVotes.length)
+    //         })
+    //         .catch(err => console.log(err))
+        
     // }
+
+    // function handleRemoveVote(e){
+    //     e.preventDefault()
+    //         userAxios.put(`api/issue/${_id}/remove`)
+    //             .then(res => {
+    //                 setDownVoteCount(res.data.downVotes.length)            
+    //                 setUpVoteCount(res.data.upVotes.length)
+    //             })
+    //             .catch(err => console.log(err))
+    // }
+    
 
     useEffect(()=> {
         
@@ -91,28 +115,30 @@ export default function PublicIssue(props) {
         // eslint-disable-next-line
     }, [])
 
-    console.log("issueComments:", issueComments)
-    console.log("setInputs", inputs)
-    console.log("user:", user, "username:", username)
+    // console.log("issueComments:", issueComments)
+    // console.log("setInputs", inputs)
+    // console.log("user:", user, "username:", username)
     return(
     <div className="issue-container">
         <div className="vote-container">
-            <h1 onClick={handleUpVote}><img src={upvoteimage} alt=""/>{`likes: ${upVotes.length}`}</h1>
-           <h1 onClick={handleDownVote}><img src={downvoteimage} alt=""/>{`dislikes: ${downVotes.length}`}</h1>
-           <button onClick={handleRemoveVote}> remove vote</button>
+
+            
+            {/* <FontAwesomeIcon icon={faSpinner} size="6x" spin /> */}
+            <h1 className="upvote-container" onClick={() => handleVote("upvote")}><FontAwesomeIcon className="upvote-icon" icon={faThumbsUp} size="lg"/>{`${upVoteCount.length}`}</h1>
+           <h1 className="downvote-container" onClick={() => handleVote("downvote")}><FontAwesomeIcon className="downvote-icon" icon={faThumbsDown} size="lf"/>{`${downVoteCount.length}`}</h1>
         </div>
         <div className="publicIssue">
-            <p>{user}</p>
             <h1>{title}</h1>
+            <p> posted by: {allUsers.find(u => u._id === author).username}</p>
             <h2>{description}</h2>
-            <h3>{new Date(datePosted).toLocaleDateString()}</h3>
+            <h3> posted on {new Date(datePosted).toLocaleDateString()}</h3>
             {!showComments ? 
             <h4 className="comment-button" onClick={() => setShowComments(!showComments)}>show comments</h4>:
             <h4 className="comment-button" onClick={() => setShowComments(!showComments)}>hide comments</h4>}
             {showComments ? <div>
                 {issueComments.map(comment => {
                     return <div key={comment._id} className="public-comment">
-                        <small className='public-comment-user'>{comment.user}</small>
+                        <small className='public-comment-user'>{allUsers.find(u => u._id === comment.user).username}</small>
                         <p>{comment.comment}</p><span className="delete-button"onClick={()=> {
                             if(user._id === comment.user){
                                     userAxios.delete(`api/issue/comments/${_id}/comments/${comment._id}`)

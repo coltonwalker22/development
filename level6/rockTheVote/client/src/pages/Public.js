@@ -8,15 +8,16 @@ import PublicIssue from '../components/PublicIssue.js'
 export default function Public() {
 
 
-  const { user: { username }, getAllIssues, allIssues} = useContext(UserContext)
+  const { getAllIssues, allIssues, getAllUsers } = useContext(UserContext)
 
 
     const issueDisplay = allIssues.map(issue => {
-        return <PublicIssue key={issue._id} {...issue}/>
+        return <PublicIssue key={issue._id} author={issue.user} {...issue}/>
     })
 
     useEffect(() => {
         getAllIssues();
+        getAllUsers();
         // eslint-disable-next-line
     }, [allIssues.length])
 
