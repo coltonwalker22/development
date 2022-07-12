@@ -3,7 +3,7 @@ const readline = require("readline-sync")
 // questionInt is taken from a dependency, can only take in integers
 let num1 = readline.questionInt("What is your first number?")
 
-let num2 = readline.questionInt("Waht is your second numer?")
+let num2 = readline.questionInt("Waht is your second number?")
 
 
 //below are functions used for the 4 operators, provided are the paramters in teh function,

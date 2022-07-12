@@ -37,15 +37,15 @@
 //     it will think it's starting a function, and not starting an object, so the : will be an unexpected symbol.
 
 
-// const carrots = ["bright orange", "ripe", "rotten"]
+const carrots = ["bright orange", "ripe", "rotten"]
 
-// function mapVegetables(arr) {
-//     return arr.map( (carrot)=> {
-//         return { type: "carrot", name: carrot }
-//     })
-// }
+function mapVegetables(arr) {
+    return arr.map( (carrot)=> {
+        return { type: "carrot", name: carrot }
+    })
+}
 
-// console.log(mapVegetables(carrots))
+console.log(mapVegetables(carrots))
 
 
 
@@ -98,10 +98,10 @@
 // Write a printString function that takes firstName, lastName, 
 // and age as parameters and returns a string like the following:
 
-function printString(firstName, lastName, age) {
-    return `Hi ${firstName}${lastName}, how does it feel to be ${age}`
-}
-console.log(printString('Jane', 'Doe', 100))
+// function printString(firstName, lastName, age) {
+//     return `Hi ${firstName}${lastName}, how does it feel to be ${age}`
+// }
+// console.log(printString('Jane', 'Doe', 100))
 
 
 // Use the shorthand syntax to make the following filter take up one line. 
@@ -134,8 +134,8 @@ console.log(printString('Jane', 'Doe', 100))
 
 //  console.log(filterForDogs(animals))
 
-function greeting(location,name) {
-    return `Hi ${name}!\n\nWelcome to ${location}.\n\nI hope you enjoy your stay. Please ask the president of ${location} if you need anything.`
-}
+// function greeting(location,name) {
+//     return `Hi ${name}!\n\nWelcome to ${location}.\n\nI hope you enjoy your stay. Please ask the president of ${location} if you need anything.`
+// }
 
-console.log(greeting('hawaii','Janice'))
+// console.log(greeting('hawaii','Janice'))

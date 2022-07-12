@@ -62,16 +62,16 @@ console.log(message1)
 
 
 
-// let input = document.createElement('input')
-// input.placeholder = "enter here"
-// myName.append(input)
+let input = document.createElement('input')
+input.placeholder = "enter here"
+myName.append(input)
 
-// let button = document.createElement('button')
-// button.textContent = "submit"
+let button2 = document.createElement('button')
+button.textContent = "submit"
 
-// myName.append(button)
+myName.append(button)
 
-// header.addEventListener("submit",(e)=>{
-//     e.preventDefault
-//     console.log("button pressed")
-// })
+main.addEventListener("submit",(e)=>{
+    e.preventDefault;
+    console.log("button pressed");
+})
