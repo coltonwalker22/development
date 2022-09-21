@@ -24,6 +24,26 @@ export default function Issue(props) {
       .catch(err => console.log(err.response.data.errMsg))
   }
 
+  function editIssue(issueId, inputs){
+    let update = {
+      comment: inputs.comment
+    }
+    userAxios.put(`api/issue/comments/${issueId}/comments`, update)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err.response.data.errMsg))
+      setIssueComments(prevIssue => prevIssue.map(issue => (issue._id === issueId ?
+        {...issue, comment: inputs.comment} : issue)))
+    
+  }
+
+  // function handleDelete(){
+  //   userAxios.delete(`/api/ingredients/${_id}`, {userId: user._id})
+  //   .then(res =>{
+  //       set(prevIngredients => prevIngredients.filter(ingredient => ingredient._id !== _id? ingredient:res.data))
+  //   })
+  //   .catch(err => console.log(err))
+// }
+
   useEffect(() => {
     newGetComments(_id)
     getUserIssues(_id)

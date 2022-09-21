@@ -5,9 +5,9 @@ import Footer from './components/Footer';
 import {ThemeContextProvider} from './themeContext'
 
 
-import './styling/header.css'
-import './styling/body.css'
-import './styling/footer.css'
+import './styling/header.css';
+import './styling/body.css';
+import './styling/footer.css';
 import './styling/App.css';
 
 function App() {

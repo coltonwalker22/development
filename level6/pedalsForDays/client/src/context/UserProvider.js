@@ -118,6 +118,8 @@ export default function UserProvider(props){
             .then(res => setAllUsers(res.data))
             .catch(err => console.log(err.response.data.errMsg))
     }
+
+
   
 
     return(

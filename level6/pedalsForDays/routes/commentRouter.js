@@ -68,7 +68,7 @@ commentRouter.delete("/:pedalpostId/comments/:commentId", (req, res, next) => {
 })
 
 // update comment
-commentRouter.put('/commentId', (req, res, next) => {
+commentRouter.put('/:pedalpostId/comments/:commentId', (req, res, next) => {
     Comment.findByIdAndUpdate(
         {_id: req.params.commentId, user: req.auth._id},
         req.body,

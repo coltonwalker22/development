@@ -108,8 +108,7 @@ export default function PublicIssue(props) {
     // }
     
 
-    useEffect(()=> {
-        
+    useEffect(()=> {   
         newGetComments(_id)
         getUserIssues(_id)
         // eslint-disable-next-line
@@ -128,7 +127,7 @@ export default function PublicIssue(props) {
            <h1 className="downvote-container" onClick={() => handleVote("downvote")}><FontAwesomeIcon className="downvote-icon" icon={faThumbsDown} size="lf"/>{`${downVoteCount.length}`}</h1>
         </div>
         <div className="publicIssue">
-            <h1>{title}</h1>
+            <h1>{title}</h1> 
             <p> posted by: {allUsers.find(u => u._id === author).username}</p>
             <h2>{description}</h2>
             <h3> posted on {new Date(datePosted).toLocaleDateString()}</h3>

@@ -6,7 +6,7 @@ const form = document.addItem
 const myList = document.getElementById('list')
 
 //e = event of a function
-form.addEventListener("submit", (e)=> {
+form.addEventListener("submit", e => {
     e.preventDefault()
 
     //input is the name="input" which is actual tag inside of <form>
@@ -55,9 +55,9 @@ form.addEventListener("submit", (e)=> {
         editSubmitButton.textContent ="Submit"
 
         editSubmitButton.addEventListener("click", (e)=>{
-         itemName.textContent = editInput.value
-         editInput.remove()
-         editSubmitButton.remove()
+         itemName.textContent = editInput.value;
+         editInput.remove();
+         editSubmitButton.remove();
         })
 
         // when the user clicks on the edit button 

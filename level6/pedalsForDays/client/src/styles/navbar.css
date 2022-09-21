@@ -1,13 +1,10 @@
 .navbar{
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     height: 100px;
-    background-repeat: no-repeat;
     background-color: rgba(73, 80, 87, 1);
-    background-image: url('http://localhost:3000/img/pedalboard3.jpeg');
-    background-position: center;
-    background-size: cover;
-    box-shadow:inset 0 0 0 2000px rgba(73, 80, 87, .45);
 
 }
 

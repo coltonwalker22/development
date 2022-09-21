@@ -9,6 +9,5 @@
 
 let button1 = document.querySelector("#info");
 function send(){
-
-    console.log(info.value)
+   return console.log(info.value)
 }

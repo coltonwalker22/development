@@ -1,9 +1,8 @@
 import React, {useEffect, useState, useContext} from 'react'
 import { UserContext } from '../context/UserProvider.js'
 import {useParams} from 'react-router-dom'
-import axios from 'axios'
+import Comment from '../components/Comment.js'
 
-const userAxios = axios.create()
 
 export default function PostPage(props) {
 
@@ -13,19 +12,22 @@ export default function PostPage(props) {
     let postId = id.slice(1)
 
     const { userAxios, getUserPosts, user, posts} = useContext(UserContext)
-
-    const foundPost = posts.find(p => p._id === params.postId)
     
     const [allUsers, setAllUsers] = useState([])
 
     const [post, setPost] = useState([])
 
-    const [ postComments, setPostComments] = useState([])
+    const [postComments, setPostComments] = useState([])
 
 
     const initInputs = { comment: ""}
 
+    const editInputs = { editComment: ""}
+
+    const [editInput, setEditInput] = useState({editInputs})
+
     const [inputs, setInputs] = useState({initInputs})
+
 
     function getAllUsers(){
         userAxios.get('/api/user')
@@ -46,6 +48,23 @@ export default function PostPage(props) {
             .then(res => setPostComments(prevState => [...prevState, res.data]))
             .catch(err => console.log(err.response.data.errMsg))
     }
+
+
+
+    function updateComment(postId, commentId, newEditComment){
+        console.log("udpate comment called with this ocmment: ", newEditComment)
+        userAxios.put(`/api/pedalpost/comments/${postId}/comments/${commentId}`, {comment: newEditComment})
+            .then(res =>{ 
+                console.log("response from updateComment: ", res.data)
+                setPostComments(prevList => prevList.map(update => (update._id === commentId ?
+                    {...update, comment: res.data.comment} : update)))
+            })
+            .catch(err => console.log(err))
+    }
+
+
+
+
     
     function getPost(){
         userAxios.get(`/api/pedalpost/${postId}`)
@@ -54,6 +73,7 @@ export default function PostPage(props) {
     }
 
     function onChange(e) {
+        e.preventDefault();
         const {name, value} = e.target
         setInputs(prevState => ({...prevState, [name]: value}))
     }
@@ -65,11 +85,8 @@ export default function PostPage(props) {
     }
 
 
-    
-    // console.log("psotId", post.id)
-    // console.log("postId", postId)
-    // console.log("Post", post)
-    // console.log("comments", postComments)
+    console.log("comments", postComments)
+
 
     useEffect(() =>{
      getPost()
@@ -80,9 +97,10 @@ export default function PostPage(props) {
 
 console.log("allUsers", allUsers)
 console.log("post.user", post.user)
-// console.log("getUserposts", getUserPosts)
 console.log("post", post)
 console.log("posts", posts)
+
+console.log("editcomment:", editInput.editComment)
 
   return (
     <div className="postpage-background">
@@ -92,25 +110,7 @@ console.log("posts", posts)
             <h3 className="postpage-date"> posted on {new Date(post.datePosted).toLocaleDateString()}</h3>
             <div><img className="postpage-img" src={post.imgUrl}></img></div>
             <p className="postpage-description">{post.description}</p>
-                {postComments.map(comment => {
-                    return <div key={comment._id} className="postpage-comment">
-                        <small className='postpage-comment-user'>{allUsers.find(u => u._id === comment.user)?.username}</small>
-                        <p>{comment.comment}</p>
-                        <h4 className="comment-date"> commented on {new Date(post.datePosted).toLocaleDateString()}</h4>
-                        <span className="delete-button"onClick={()=> {
-                            if(user._id === comment.user){
-                                    userAxios.delete(`/api/pedalpost/comments/${post._id}/comments/${comment._id}`)
-                                    .then(res => {
-                                        newGetComments(post._id)
-                                        alert(`Successfully deleted the comment`)
-                                    })
-                                    .catch(err => console.log(err))
-                            } else {
-                                alert("you can't delete this comment")
-                            }
-                        }}>Delete Comment</span>
-                        </div>
-                })}
+                {postComments.map(comment => <Comment key={comment._id} comment={comment} newGetComments={newGetComments} allUsers={allUsers} post={post} updateComment={updateComment} user={user} />)}        
             <div className="postpage-form-section">
                 <form onSubmit={submitComment}>
                     <textarea

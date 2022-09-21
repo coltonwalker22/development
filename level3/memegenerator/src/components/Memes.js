@@ -56,7 +56,6 @@ export default function Meme(){
             topText:"",
             bottomText:"",
             randomImage: meme.randomImage,
-    
         })
         console.log("id", meme.id)
         // instead of using DOM way, use state to manage the values. 
@@ -71,10 +70,13 @@ export default function Meme(){
     function deleteMeme(id){
         setSavedMemes(prevMeme => prevMeme.filter((meme, i) => (i !== id)));
 
+        // const newList = savedMemes.filter((item) => item.id !== id);
+
+        // setSavedMemes(newList);
      }
 
       // setting a useState for editMode where its set to false.
-    const [editMode, setEditMode] = useState(false)
+
 
     //local state passed through savedmeme component (as a prop)
     // needed a place store the new value after performing "Editing mode"

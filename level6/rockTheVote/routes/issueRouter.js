@@ -53,7 +53,7 @@ issueRouter.get('/:issueId', (req, res, next) => {
 
 //delete issue by the Id
 issueRouter.delete("/:issueId", (req, res, next) => {
-    Issue.findByAndRemove(
+    Issue.findByIdAndRemove(
         {_id: req.params.issueId, user: req.auth._id},
         (err, issue) => {
             if (err) {

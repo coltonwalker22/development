@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
 export default function Savedmeme (props){
-  const {randomImage, topText, bottomText, setEditMode, editMode, editMeme, deleteMeme, newInput, setNewInput, id} = props
+  const {randomImage, topText, bottomText, editMeme, deleteMeme, newInput, setNewInput, id} = props
 console.log("props:",props)
  
  function onChange(event){
     const {name, value} = event.target
     setNewInput(prevMeme => ({...prevMeme, [name]: value}))
 }
+
+const [editMode, setEditMode] = useState(false)
 
 console.log("props.id:", props.id)
 

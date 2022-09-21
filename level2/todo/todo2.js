@@ -66,7 +66,7 @@ function makeOne(todo){
         deleteButton.className = "deleteButton";
         newListItem.append(deleteButton)
             deleteButton.addEventListener("click", () =>{
-                newListItem.remove()
+                // newListItem.remove()
                 let ID = todo._id
                 axios.delete(`https://api.vschool.io/coltonwalker/todo/${ID}`)
                     .then(res => console.log(res))

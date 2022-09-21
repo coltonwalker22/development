@@ -1,4 +1,8 @@
+// // ...
+// // ...
 
+// let namePicked = readline.question("...")
+// player.setName(namePicked))
 
 class Player {
     constructor(name, status, totalCoins, hasStar){
@@ -90,4 +94,4 @@ const gameRun = setInterval(() => {
         player.addCoin();
     }
 }, 3000)
-
+ 

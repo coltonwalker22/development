@@ -14,9 +14,9 @@ const person = {
     age: 20
 }
 
-const updates = { 
-    name: "dan"
-}
+// const updates = { 
+//     name: "dan"
+// }
 
  const result = Object.assign(person, updates)
  console.log(result)

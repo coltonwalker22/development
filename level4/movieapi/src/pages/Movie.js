@@ -50,6 +50,7 @@ function Movie() {
         <p>{movie.overview}</p>
         <h3>{`Budget: $ ${movie.budget}`}</h3>
         <h3>{`Revenue: $ ${movie.revenue}`}</h3>
+        <h3>{movie.production_companies[0].name}</h3>
         <a href={`${movie.homepage}`}>{movie.homepage}</a>
     </div>
     </>

@@ -51,13 +51,56 @@
 
 // 3. Write a for loop that will push every other fruit to an array.
 
-const fruit = ["banana", "orange", "apple", "kiwi", "pear", "peach"]
+// const fruit = ["banana", "orange", "apple", "kiwi", "pear", "peach"]
 
-function skipFruit(array){
-        let newArr = []
-        for(let i = 0; i <= array.length; i+=2){
-            newArr.push(array[i])
-        }
-        return newArr.join(", ")
-    } 
-    console.log(skipFruit(fruit))
+// function skipFruit(array){
+//         let newArr = []
+//         for(let i = 0; i <= array.length; i+=2){
+//             newArr.push(array[i])
+//         }
+//         return newArr.join(", ")
+//     } 
+//     console.log(skipFruit(fruit))
+
+
+
+//     1. Create an array that mimics a grid like the following using nested `for` loops:
+
+// [[0, 0, 0],
+// [0, 0, 0],
+// [0, 0, 0]]
+
+// const zeros = [0, 0, 0]
+
+
+// function zeroArray(array){
+//     let newArr = []
+//     for(let i = 0; i <= array.length; i++){
+//         newArr.push(array[i])
+//     }
+
+// }
+
+
+// console.log(zeroArray(zeros))
+
+
+// row = [];
+// newArray = [];
+// for (let i = 0; i < 3; i++) {  // i sets the amount of arrays
+//   for (j = 0; j < 1; j++) {  // j sets the amount to a single array, holding row
+//     row.push(0);
+//   }
+//   newArray.push(row);
+// }
+// console.log(newArray);
+
+row = [];
+newArray = [];
+for (let i = 0; i < 3; i++) {
+  for (j = 0; j < 1; j++) {
+    row.push([i]);
+  }
+  newArray.push(row);
+}
+console.log(newArray);

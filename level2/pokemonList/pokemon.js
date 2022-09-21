@@ -9,14 +9,16 @@ xhr.onreadystatechange = ()=>{
         let JSONData = xhr.responseText;
         let data = JSON.parse(JSONData)
         displayName(data.objects[0].pokemon)
+        console.log(data.objects)
     }
 }
 
-const displayName = (arr) => {
+function displayName(arr){
     for(let i = 0; i < arr.length; i++){
-        let h1 = document.createElement('h1');
-        h1.textContent = `${arr[i].name}`;
-        document.body.appendChild(h1);
+        let div = document.createElement('div');
+        // div.textContent = `${arr[i].name}`;
+        div.textContent = arr[i].name
+        document.body.appendChild(div);
     }
 }
 

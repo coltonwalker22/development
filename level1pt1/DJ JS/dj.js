@@ -130,18 +130,33 @@ orangeSqr.style.backgroundColor ="grey")
 
 // KEY EVENTS
 
-window.addEventListener("keydown", pressedkey,);
+window.addEventListener("keydown", pressedKey);
+window.addEventListener("keyup", keyRelease);
 
-function pressedkey(key){
+function pressedKey(key){
     if(key.keyCode == 66){
         blueSquare.style.backgroundColor ="blue"
     } else if(key.keyCode == 82){
         redSquare.style.backgroundColor ="red"
     } else if(key.keyCode == 89){
         yellowSquare.style.backgroundColor ="yellow"
-    } else if(key.keyCode ==71){
+    } else if(key.keyCode == 71){
         greenSquare.style.backgroundColor ="green"
     } else if(key.keyCode == 79){
         orangeSquare.style.backgroundColor ="orange"
+    }
+}
+
+function keyRelease(key){ 
+    if(key.keyCode == 66 && (blueSquare.style.backgroundColor ="blue")){
+        blueSquare.style.backgroundColor = "grey"
+    } else if(key.keyCode == 82 && (redSquare.style.backgroundColor ="red")){
+        redSquare.style.backgroundColor ="grey"
+    } else if(key.keyCode == 89 && (yellowSquare.style.backgroundColor ="yellow")){
+        yellowSquare.style.backgroundColor = "grey"
+    } else if(key.keyCode == 71 && (greenSquare.style.backgroundColor ="green")){
+        greenSquare.style.backgroundColor = "grey"
+    } else if(key.keyCode == 79 && (orangeSquare.style.backgroundColor ="orange")){
+        orangeSquare.style.backgroundColor = "grey"
     }
 }

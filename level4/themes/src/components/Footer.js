@@ -7,7 +7,10 @@ export default function Footer(props){
 
     return(
         <div className={`${color}-footer`}>
-            <h1> Hello, I am a footer. Although I have no feet.</h1>
+
+                <h1> Hello, I am a footer. Although I have no feet.</h1>
+
+
         </div>
 
     )
